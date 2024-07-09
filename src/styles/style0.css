@@ -1,0 +1,141 @@
+body,
+html {
+  margin: 0px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.imgFullW {
+  width: 100%;
+}
+
+#splash {
+  background-color: blue;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px 10px 10px;
+  gap: 2px;
+}
+
+#mySpan {
+  background-color: yellow;
+  align-self: flex-start;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#navBar {
+  background-color: white;
+  color: black;
+}
+#headline {
+  background-color: red;
+}
+#scriptHolder {
+  background-color: green;
+  flex-grow: 1;
+}
+#headlineText {
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+#existingCanvas {
+  display: block;
+  background-color: hotpink;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid green;
+}
+
+#homeCopy {
+  position: relative;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+#homeCopy > img {
+  padding: 5vw;
+  width: 25%; /* Forces the image to expand or shrink to fit the column width */
+  height: auto; /* Maintains the image's aspect ratio */
+  object-fit: contain; /* Ensures the entire image fits within the given dimensions without being cropped */
+}
+
+#homeCopy > * {
+  /* Targets all direct children of #homeCopy */
+  flex: 1 1 25%; /* Each child takes up 25% of the container's width */
+  box-sizing: border-box;
+  padding: 10px; /* Adds space inside each child element */
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+
+.bar {
+  background-color: #333;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.bar:nth-child(1) {
+  top: 0px;
+}
+.bar:nth-child(2) {
+  top: 11px;
+}
+.bar:nth-child(3) {
+  top: 22px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: none;
+  background-color: #f9f9f9;
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+  width: 100%;
+  height: 100%;
+}
+
+.nav-menu a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .nav-menu {
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+}
