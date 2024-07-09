@@ -1,8 +1,12 @@
 body,
 html {
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
   margin: 0px;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,8 +20,8 @@ html {
 content {
   background-color: white;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: block;
   /* display: flex; */
   /* flex-direction: column; */
@@ -29,7 +33,7 @@ content {
   z-index: 2;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
 }
 
 #midLayer {
@@ -40,10 +44,10 @@ content {
 }
 
 #lowLayer {
+  position: absolute;
   z-index: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 
 #mySpan {
@@ -63,7 +67,7 @@ content {
   width: 50px;
   height: 100vh;
   right: 0;
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   background-color: white;
   color: black;
 }
@@ -81,7 +85,7 @@ content {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  clip-path: rect(5vh 10vw 95vh 90vw round 3vw);
+  clip-path: rect(30vh 50px 95vh calc(100% - 50px) round 3%);
 }
 
 #navBar {
@@ -93,7 +97,7 @@ content {
   background-color: white;
   color: black;
   /* box-sizing: border-box; */
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
 }
 
 #logo-container {
@@ -225,7 +229,7 @@ content {
   flex-wrap: wrap; /* Allows items to wrap to the next line */
 }
 #homeCopy > img {
-  padding: 5vw;
+  padding: 5%;
   width: 25%; /* Forces the image to expand or shrink to fit the column width */
   height: auto; /* Maintains the image's aspect ratio */
   object-fit: contain; /* Ensures the entire image fits within the given dimensions without being cropped */
