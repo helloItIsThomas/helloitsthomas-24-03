@@ -1,0 +1,38 @@
+<!-- PROJECT PAGE TEMPLATE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title"></title>
+    <link rel="stylesheet" href="../styles/style0.css" />
+  </head>
+  <body>
+    <div class="nav-menu">
+      <li><a href="../index.html">about</a></li>
+      <li><a href="projectParent.html?page=project1">DIA</a></li>
+      <li><a href="projectParent.html?page=project2">Language</a></li>
+      <li><a href="projectParent.html?page=project3">c4a</a></li>
+    </div>
+    <div id="splash">
+      <div id="navBar">
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        hello, it's thomas
+      </div>
+      <div id="mySpan"></div>
+      <div id="scriptHolder">
+        <script id="canvScript" type="module" src="../scripts/main.js"></script>
+      </div>
+    </div>
+    <main id="main-content"></main>
+    <script type="module">
+      import { loadPageContent } from "../scripts/projectContent.js";
+      // <img class="imgFullW" src="/testimg.png"></img>;
+    </script>
+    <footer>footer</footer>
+  </body>
+</html>
