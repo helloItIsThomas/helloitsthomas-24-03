@@ -14,7 +14,7 @@ html {
 }
 
 #splash {
-  background-color: blue;
+  background-color: white;
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
@@ -33,12 +33,34 @@ html {
 }
 
 #knobBar {
+  display: flex;
   position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 100vh;
   right: 0;
+  border-left: 1px solid black;
   background-color: white;
   color: black;
+}
+
+.knob {
+  margin: 10px;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  background-color: orange;
+  color: black;
+}
+
+#bgImg {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* z-index: -1; */
 }
 
 #navBar {
@@ -49,17 +71,31 @@ html {
   height: 100vh;
   background-color: white;
   color: black;
+  /* box-sizing: border-box; */
+  border-right: 1px solid black;
 }
 
 #logo-container {
   height: 20vh;
+  background-color: white;
+}
+
+#logo img {
+  margin: 0;
+  padding: 0;
+  left: 25px;
+  top: 10px;
+  width: 80px;
+  position: absolute;
+  z-index: 1;
+  /* background-color: yellow; */
 }
 
 #slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: green; */
+  background-color: white;
   width: 100%;
   height: 100%;
 }
@@ -67,18 +103,71 @@ html {
 .slider {
   -webkit-appearance: none;
   appearance: none;
-  width: 5px;
+  width: 20px;
   height: 95%;
-  background: #d3d3d3;
+  background: transparent;
   outline: none;
-  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-runnable-track {
+  width: 2px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to top,
+    #4caf50,
+    #4caf50 2px,
+    transparent 2px,
+    transparent 10px
+  );
+}
+
+.slider::-moz-range-track {
+  width: 2px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to top,
+    #4caf50,
+    #4caf50 2px,
+    transparent 2px,
+    transparent 10px
+  );
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: pink;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: black;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+}
+
+.slider::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  background: pink;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #social-container {
   display: flex;
-  background-color: green;
   flex-direction: column;
   justify-content: center;
+  margin: 10px;
 }
 .socialIcon {
   align-self: center;
