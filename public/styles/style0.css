@@ -20,7 +20,7 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0px 10px 10px 10px;
+  /* padding: 0px 10px 10px 10px; */
   gap: 2px;
 }
 
@@ -32,10 +32,58 @@ html {
   white-space: nowrap;
 }
 
-#navBar {
+#knobBar {
+  position: absolute;
+  width: 50px;
+  height: 100vh;
+  right: 0;
   background-color: white;
   color: black;
 }
+
+#navBar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+#logo-container {
+  height: 20vh;
+}
+
+#slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 95%;
+  background: #d3d3d3;
+  outline: none;
+  transition: opacity 0.2s;
+}
+
+#social-container {
+  display: flex;
+  background-color: green;
+  flex-direction: column;
+  justify-content: center;
+}
+.socialIcon {
+  align-self: center;
+}
+
 #headline {
   background-color: red;
 }
@@ -79,34 +127,6 @@ html {
   flex: 1 1 25%; /* Each child takes up 25% of the container's width */
   box-sizing: border-box;
   padding: 10px; /* Adds space inside each child element */
-}
-
-/* Hamburger Menu Icon */
-.hamburger-menu {
-  cursor: pointer;
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  position: relative;
-}
-
-.bar {
-  background-color: #333;
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  transition: all 0.3s ease;
-}
-
-.bar:nth-child(1) {
-  top: 0px;
-}
-.bar:nth-child(2) {
-  top: 11px;
-}
-.bar:nth-child(3) {
-  top: 22px;
 }
 
 /* Navigation Menu */
