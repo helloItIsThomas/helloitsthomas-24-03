@@ -44,7 +44,6 @@ content {
   /* flex-direction: column; */
   width: 100%;
   height: 100%;
-  /* background-color: pink; */
 }
 
 #mySpan {
@@ -123,7 +122,8 @@ content {
   display: flex;
   flex-direction: column;
   width: 50px;
-  height: 100vh;
+  margin-top: 60px;
+  /* height: 100%; */
   /* border-right: 1px solid black; */
   color: black;
   /* box-sizing: border-box; */
@@ -141,16 +141,54 @@ content {
   top: 10px;
   width: 80px;
   position: absolute;
-  /* background-color: yellow; */
 }
 
 #slider-container {
+  /* background-color: blue; */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  /* background-color: white; */
+  justify-content: center;
+  gap: 5%;
   width: 100%;
   height: 100%;
+}
+.navProject {
+  background-color: black;
+  width: 1px;
+  height: 100%;
+}
+
+#navHandle {
+  position: absolute;
+  background-color: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#triangle {
+  /* rotate: 270deg; */
+  background-color: white;
+  z-index: 100;
+  --r: 6px; /* border radius */
+
+  width: 50px;
+  aspect-ratio: 1 / cos(30deg);
+  --_g: calc(tan(60deg) * var(--r)) bottom var(--r), #000 98%, #0000 101%;
+  mask:
+    /* a conic gradient to fill the middle area */ conic-gradient(
+        from -30deg at 50% calc(200% - 3 * var(--r) / 2),
+        #000 60deg,
+        #0000 0
+      )
+      0 100%/100% calc(100% - 3 * var(--r) / 2) no-repeat,
+    /* 3 radial gradients for 3 circles */
+      radial-gradient(var(--r) at 50% calc(2 * var(--r)), #000 98%, #0000 101%),
+    radial-gradient(var(--r) at left var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+  /* the 3-point polygon */
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
 .slider {
@@ -191,7 +229,7 @@ content {
   appearance: none;
   width: 10px;
   height: 10px;
-  /* background: pink; */
+
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -210,7 +248,7 @@ content {
 .slider::-ms-thumb {
   width: 25px;
   height: 25px;
-  background: pink;
+
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -241,7 +279,6 @@ content {
 
 #existingCanvas {
   display: block;
-  /* background-color: hotpink; */
   width: 100%;
   height: 100%;
   margin: 0;

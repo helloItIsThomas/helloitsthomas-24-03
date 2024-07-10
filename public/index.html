@@ -11,7 +11,16 @@
     <div class="layout0">
       <div id="navBar">
         <div id="slider-container">
-          <input class="slider" type="range" orient="vertical" />
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
+          <div class="navProject"></div>
         </div>
         <div id="social-container">
           <div class="socialIcon" target="_blank">f</div>
@@ -19,10 +28,9 @@
           <div class="socialIcon" target="_blank">t</div>
         </div>
       </div>
-      <div id="projectContent">
+      <div onClick="selectProject()" id="projectContent">
         <div id="projectBackC">
           <p>826 super real store</p>
-          <img src="/assets/diaImg.png" alt="diaImg" />
         </div>
         <div id="projectFrontC">
           <div id="thumbnail">
@@ -44,31 +52,31 @@
 </html>
 
 <script>
-  let projectContent = document.querySelector("#projectContent");
+  let projectContent;
+
+  function selectProject() {
+    resizeClip();
+    // shrinkKnobBar();
+    toggleScrollBehavior(projectContent);
+    console.log("click");
+  }
 
   window.addEventListener("load", () => {
-    // projectContent = document.querySelector("#projectContent");
+    projectContent = document.querySelector("#projectContent");
     resizeTextToFit();
+    console.log("load");
   });
 
-  window.addEventListener("click", () => {
-    console.log("click");
-    resizeClip();
-    toggleScrollBehavior(projectContent);
-  });
   window.addEventListener("resize", () => {
     resizeTextToFit();
+    console.log("resize");
   });
   window.addEventListener("wheel", () => {
-    if (projectContent.style.overflowY !== "scroll") {
-      console.log("Wheel Scrolling");
-    }
+    console.log("scroll");
   });
 </script>
 
 <script>
-  function homeProjectToggle() {}
-
   function toggleScrollBehavior(pc) {
     const projectContentRef = window.getComputedStyle(pc);
     projectContent.style.overflowY =
@@ -98,7 +106,15 @@
     elementToClip.style.clipPath = clipPathValue;
   }
 
-  function shrinkKnobBar() {}
+  function shrinkKnobBar() {
+    console.log("shrinkKnobBar");
+    const knobBar = document.querySelector("#knobBar");
+    knobBar.style.width = "10px";
+  }
+
+  function barToBack() {
+    console.log("barToBack");
+  }
 </script>
 
 <!-- 
