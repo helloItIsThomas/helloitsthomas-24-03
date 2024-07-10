@@ -37,8 +37,8 @@
         <div class="knob"></div>
         <div class="knob"></div>
       </div>
+      <div id="logo"><img src="/assets/hellologo.png" alt="hello logo" /></div>
     </div>
-    <!-- <div id="logo"><img src="/assets/hellologo.png" alt="hello logo" /></div> -->
   </body>
 </html>
 
@@ -53,11 +53,16 @@
       p.style.fontSize = fontSize + "px";
     }
     const fontSizeRef = p.style.fontSize;
-    const clipPathValue = `rect(calc(${fontSizeRef} + 15%) 0 95% 100% round 5vw)`;
+    const topPaddingRef = window.getComputedStyle(
+      document.querySelector("#projectBackC")
+    ).paddingTop;
+    console.log(fontSizeRef);
+    console.log(topPaddingRef);
+    const clipPathValue = `rect(calc(calc(${fontSizeRef} + ${fontSizeRef}) + 5%) 0 95% 100% round 5vw)`;
     const elementToClip = document.querySelector("#thumbnail img");
     elementToClip.style.clipPath = clipPathValue;
   }
 
-  // window.addEventListener("load", resizeTextToFit);
+  window.addEventListener("load", resizeTextToFit);
   window.addEventListener("resize", resizeTextToFit);
 </script>
