@@ -1,7 +1,5 @@
 body,
 html {
-  /* overflow-x: hidden; */
-  /* overflow-y: auto; */
   margin: 0px;
   margin: 0;
   padding: 0;
@@ -29,25 +27,19 @@ content {
   gap: 2px;
 }
 
-#topLayer {
-  z-index: 2;
+#thumbnail {
   width: 100%;
   height: 100%;
-  position: fixed;
+  background-color: blue;
+  /* position: fixed; */
 }
 
-#midLayer {
-  z-index: 1;
+.layout0 {
+  display: flex;
+  /* flex-direction: column; */
   width: 100%;
   height: 100%;
-  position: absolute;
-}
-
-#lowLayer {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
+  background-color: green;
 }
 
 #mySpan {
@@ -60,7 +52,7 @@ content {
 
 #knobBar {
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -80,16 +72,34 @@ content {
   color: black;
 }
 
-#bgImg img {
-  position: absolute;
-  object-fit: cover;
+#projectContent {
+  position: relative;
   width: 100%;
   height: 100%;
-  clip-path: rect(30% 50px 95% calc(100% - 50px) round 5vw);
+}
+
+#projectBackC {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+#projectFrontC {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+#thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 99%;
+  clip-path: rect(30% 50px 90% calc(100% - 50px) round 5vw);
 }
 
 #navBar {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   width: 50px;
@@ -103,6 +113,10 @@ content {
 #logo-container {
   height: 20%;
   background-color: white;
+}
+
+#logo {
+  z-index: 100;
 }
 
 #logo img {
@@ -221,7 +235,7 @@ content {
 }
 
 #homeCopy {
-  position: relative;
+  /* position: relative; */
   display: block;
   margin-left: 10px;
   margin-right: 10px;
@@ -244,7 +258,7 @@ content {
 
 /* Navigation Menu */
 .nav-menu {
-  position: absolute;
+  /* position: absolute; */
   top: 30px;
   left: 0;
   display: none;
@@ -265,7 +279,7 @@ content {
 /* Media query for smaller screens */
 @media (max-width: 600px) {
   .nav-menu {
-    position: absolute;
+    /* position: absolute; */
     top: 30px;
     left: 0;
   }
