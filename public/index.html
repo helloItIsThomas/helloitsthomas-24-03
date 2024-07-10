@@ -20,7 +20,9 @@
         </div>
       </div>
       <div id="projectContent">
-        <div id="projectBackC"></div>
+        <div id="projectBackC">
+          <p>826 super real store</p>
+        </div>
         <div id="projectFrontC">
           <div id="thumbnail">
             <img src="/assets/diaImg.png" alt="diaImg" />
@@ -39,3 +41,19 @@
     <!-- <div id="logo"><img src="/assets/hellologo.png" alt="hello logo" /></div> -->
   </body>
 </html>
+
+<script>
+  function resizeTextToFit() {
+    const paragraphs = document.querySelectorAll("#projectBackC p");
+    const p = paragraphs[0];
+    let fontSize = 200;
+    p.style.fontSize = fontSize + "px";
+    while (p.scrollWidth > p.clientWidth) {
+      fontSize--;
+      p.style.fontSize = fontSize + "px";
+    }
+  }
+
+  window.addEventListener("load", resizeTextToFit);
+  window.addEventListener("resize", resizeTextToFit);
+</script>
