@@ -22,6 +22,7 @@
       <div id="projectContent">
         <div id="projectBackC">
           <p>826 super real store</p>
+          <img src="/assets/diaImg.png" alt="diaImg" />
         </div>
         <div id="projectFrontC">
           <div id="thumbnail">
@@ -43,6 +44,8 @@
 </html>
 
 <script>
+  function homeProjectToggle() {}
+
   function resizeTextToFit() {
     const paragraphs = document.querySelectorAll("#projectBackC p");
     const p = paragraphs[0];
@@ -52,17 +55,42 @@
       fontSize--;
       p.style.fontSize = fontSize + "px";
     }
+  }
+
+  function resizeClip() {
+    const paragraphs = document.querySelectorAll("#projectBackC p");
+    const p = paragraphs[0];
     const fontSizeRef = p.style.fontSize;
     const topPaddingRef = window.getComputedStyle(
       document.querySelector("#projectBackC")
     ).paddingTop;
-    console.log(fontSizeRef);
-    console.log(topPaddingRef);
-    const clipPathValue = `rect(calc(calc(${fontSizeRef} + ${fontSizeRef}) + 5%) 0 95% 100% round 5vw)`;
+    const clipPathValue = `rect(calc(calc(${fontSizeRef} + ${topPaddingRef}) + 5%) 0 95% 100% round 5vw)`;
     const elementToClip = document.querySelector("#thumbnail img");
     elementToClip.style.clipPath = clipPathValue;
   }
 
-  window.addEventListener("load", resizeTextToFit);
-  window.addEventListener("resize", resizeTextToFit);
+  window.addEventListener("load", () => {
+    resizeTextToFit();
+  });
+
+  window.addEventListener("click", () => {
+    console.log("click");
+    resizeClip();
+
+    const projectContent = document.querySelector("#projectContent");
+    const projectContentRef = window.getComputedStyle(projectContent);
+    projectContent.style.overflowY =
+      projectContent.style.overflowY === "scroll" ? "hidden" : "scroll";
+  });
+  window.addEventListener("resize", () => {
+    resizeTextToFit();
+    // resizeClip();
+  });
+  window.addEventListener("wheel", () => {
+    // homeProjectToggle();
+    const projectContent = document.querySelector("#projectContent");
+    if (projectContent.style.overflowY !== "scroll") {
+      console.log("Wheel Scrolling");
+    }
+  });
 </script>
