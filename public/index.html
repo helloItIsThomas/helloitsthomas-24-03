@@ -44,7 +44,36 @@
 </html>
 
 <script>
+  let projectContent = document.querySelector("#projectContent");
+
+  window.addEventListener("load", () => {
+    // projectContent = document.querySelector("#projectContent");
+    resizeTextToFit();
+  });
+
+  window.addEventListener("click", () => {
+    console.log("click");
+    resizeClip();
+    toggleScrollBehavior(projectContent);
+  });
+  window.addEventListener("resize", () => {
+    resizeTextToFit();
+  });
+  window.addEventListener("wheel", () => {
+    if (projectContent.style.overflowY !== "scroll") {
+      console.log("Wheel Scrolling");
+    }
+  });
+</script>
+
+<script>
   function homeProjectToggle() {}
+
+  function toggleScrollBehavior(pc) {
+    const projectContentRef = window.getComputedStyle(pc);
+    projectContent.style.overflowY =
+      projectContent.style.overflowY === "scroll" ? "hidden" : "scroll";
+  }
 
   function resizeTextToFit() {
     const paragraphs = document.querySelectorAll("#projectBackC p");
@@ -69,28 +98,10 @@
     elementToClip.style.clipPath = clipPathValue;
   }
 
-  window.addEventListener("load", () => {
-    resizeTextToFit();
-  });
-
-  window.addEventListener("click", () => {
-    console.log("click");
-    resizeClip();
-
-    const projectContent = document.querySelector("#projectContent");
-    const projectContentRef = window.getComputedStyle(projectContent);
-    projectContent.style.overflowY =
-      projectContent.style.overflowY === "scroll" ? "hidden" : "scroll";
-  });
-  window.addEventListener("resize", () => {
-    resizeTextToFit();
-    // resizeClip();
-  });
-  window.addEventListener("wheel", () => {
-    // homeProjectToggle();
-    const projectContent = document.querySelector("#projectContent");
-    if (projectContent.style.overflowY !== "scroll") {
-      console.log("Wheel Scrolling");
-    }
-  });
+  function shrinkKnobBar() {}
 </script>
+
+<!-- 
+next thing to do should be to write out the possible states in figma,
+how to organize the functions to best support them.
+-->

@@ -6,10 +6,18 @@ module.exports = function (eleventyConfig) {
     "./node_modules/three": "js/three",
   });
 
+  eleventyConfig.setServerOptions({
+    // Opt-out of the live reload snippet
+    enabled: true,
+    // Opt-out of DOM diffing updates and use page reloads
+    domdiff: false,
+  });
+
   return {
     dir: {
       input: "src",
       output: "public",
     },
+    watch: false,
   };
 };
