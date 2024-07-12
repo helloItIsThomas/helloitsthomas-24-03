@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style0.css" />
+    <link rel="stylesheet" href="/styles/knob.css" />
     <title id="page-title">home</title>
   </head>
   <body>
@@ -39,15 +40,33 @@
         </div>
       </div>
       <div id="knobBar">
-        <div class="knob"></div>
-        <div class="knob"></div>
-        <div class="knob"></div>
-        <div class="knob"></div>
-        <div class="knob"></div>
-        <div class="knob"></div>
+        <div class="knob-container">
+          <div class="knob"></div>
+          <div class="knob-display">0.0</div>
+        </div>
+        <div class="knob-container">
+          <div class="knob"></div>
+          <div class="knob-display">0.0</div>
+        </div>
+        <div class="knob-container">
+          <div class="knob"></div>
+          <div class="knob-display">0.0</div>
+        </div>
+        <div class="knob-container">
+          <div class="knob"></div>
+          <div class="knob-display">0.0</div>
+        </div>
       </div>
-      <div id="logo"><img src="/assets/hellologo.png" alt="hello logo" /></div>
+      <div id="logo">
+        <img src="/assets/hellologo.png" alt="hello logo" />
+      </div>
     </div>
+    <!-- <div class="knob-container"> -->
+    <!-- <div id="knob" class="knob"></div> -->
+    <!-- <div id="knob-display">0.0</div> -->
+    <!-- </div> -->
+    <script src="js/Knob.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
 
