@@ -140,9 +140,15 @@
     "/assets/techno.png",
   ];
 
+  let isScrolling = false; // Flag to track the scrolling state
+
   window.addEventListener("wheel", (event) => {
+    if (!isScrolling) {
+      console.log("Scrolling begins");
+      isScrolling = true;
+    }
+
     scrollPos += event.deltaY / mappingFactor;
-    console.log(scrollPos);
     let roundedIndex = Math.round(scrollPos) % images.length;
     if (roundedIndex < 0) {
       roundedIndex += images.length; // Correct negative indices
@@ -153,6 +159,14 @@
       imageIndex = roundedIndex;
       thumbnailImg.src = images[imageIndex];
     }
+
+    clearTimeout(window.scrollTimeout);
+    window.scrollTimeout = setTimeout(() => {
+      if (isScrolling) {
+        console.log("Scrolling ends");
+        isScrolling = false;
+      }
+    }, 150); // Adjust timeout as needed
   });
 </script>
 <script src="/js/handleInteraction.js"></script>
