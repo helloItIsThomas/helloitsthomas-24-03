@@ -41,18 +41,46 @@
       </div>
       <div id="knobBar">
         <div class="knob-container">
+          <div class="lightContainer">
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+          </div>
           <div class="knob"></div>
           <div class="knob-display">0.0</div>
         </div>
         <div class="knob-container">
+          <div class="lightContainer">
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+          </div>
           <div class="knob"></div>
           <div class="knob-display">0.0</div>
         </div>
         <div class="knob-container">
+          <div class="lightContainer">
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+          </div>
           <div class="knob"></div>
           <div class="knob-display">0.0</div>
         </div>
         <div class="knob-container">
+          <div class="lightContainer">
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+            <div class="knobLight"></div>
+          </div>
           <div class="knob"></div>
           <div class="knob-display">0.0</div>
         </div>
@@ -61,10 +89,6 @@
         <img src="/assets/hellologo.png" alt="hello logo" />
       </div>
     </div>
-    <!-- <div class="knob-container"> -->
-    <!-- <div id="knob" class="knob"></div> -->
-    <!-- <div id="knob-display">0.0</div> -->
-    <!-- </div> -->
     <script src="js/Knob.js"></script>
     <script src="js/main.js"></script>
   </body>
@@ -90,53 +114,45 @@
     resizeTextToFit();
     console.log("resize");
   });
-  window.addEventListener("wheel", () => {
-    console.log("scroll");
+
+  let scrollPos = 0;
+  let imageIndex = 0;
+  const mappingFactor = 100; // Mapping factor to control sensitivity
+  let lastRoundedIndex = -1; // Keep track of the last rounded index
+  const thumbnailImg = document.querySelector("#thumbnail img");
+
+  const images = [
+    "/assets/826.png",
+    "/assets/aaff.png",
+    "/assets/dhs.png",
+    "/assets/techno.png",
+    "/assets/826.png",
+    "/assets/aaff.png",
+    "/assets/dhs.png",
+    "/assets/techno.png",
+    "/assets/826.png",
+    "/assets/aaff.png",
+    "/assets/dhs.png",
+    "/assets/techno.png",
+    "/assets/826.png",
+    "/assets/aaff.png",
+    "/assets/dhs.png",
+    "/assets/techno.png",
+  ];
+
+  window.addEventListener("wheel", (event) => {
+    scrollPos += event.deltaY / mappingFactor;
+    console.log(scrollPos);
+    let roundedIndex = Math.round(scrollPos) % images.length;
+    if (roundedIndex < 0) {
+      roundedIndex += images.length; // Correct negative indices
+    }
+
+    if (roundedIndex !== lastRoundedIndex) {
+      lastRoundedIndex = roundedIndex;
+      imageIndex = roundedIndex;
+      thumbnailImg.src = images[imageIndex];
+    }
   });
 </script>
-
-<script>
-  function toggleScrollBehavior(pc) {
-    const projectContentRef = window.getComputedStyle(pc);
-    projectContent.style.overflowY =
-      projectContent.style.overflowY === "scroll" ? "hidden" : "scroll";
-  }
-
-  function resizeTextToFit() {
-    const paragraphs = document.querySelectorAll("#projectBackC p");
-    const p = paragraphs[0];
-    let fontSize = 200;
-    p.style.fontSize = fontSize + "px";
-    while (p.scrollWidth > p.clientWidth) {
-      fontSize--;
-      p.style.fontSize = fontSize + "px";
-    }
-  }
-
-  function resizeClip() {
-    const paragraphs = document.querySelectorAll("#projectBackC p");
-    const p = paragraphs[0];
-    const fontSizeRef = p.style.fontSize;
-    const topPaddingRef = window.getComputedStyle(
-      document.querySelector("#projectBackC")
-    ).paddingTop;
-    const clipPathValue = `rect(calc(calc(${fontSizeRef} + ${topPaddingRef}) + 5%) 0 95% 100% round 5vw)`;
-    const elementToClip = document.querySelector("#thumbnail img");
-    elementToClip.style.clipPath = clipPathValue;
-  }
-
-  function shrinkKnobBar() {
-    console.log("shrinkKnobBar");
-    const knobBar = document.querySelector("#knobBar");
-    knobBar.style.width = "10px";
-  }
-
-  function barToBack() {
-    console.log("barToBack");
-  }
-</script>
-
-<!-- 
-next thing to do should be to write out the possible states in figma,
-how to organize the functions to best support them.
--->
+<script src="/js/handleInteraction.js"></script>

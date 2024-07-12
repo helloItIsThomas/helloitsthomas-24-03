@@ -9,7 +9,20 @@
   /* background-color: red; */
 }
 
+.lightContainer {
+  display: flex;
+}
+
+.knobLight {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  border: #000 1px solid;
+  background-color: yellowgreen;
+}
+
 .knob {
+  /* margin: 0; */
   width: 40px;
   height: 40px;
   border-radius: 50%;
