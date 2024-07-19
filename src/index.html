@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style0.css" />
+    <link rel="stylesheet" href="/styles/contentModule.css" />
     <link rel="stylesheet" href="/styles/knob.css" />
     <title id="page-title">home</title>
   </head>
@@ -13,15 +14,15 @@
       <div id="navBar">
         <div id="slider-container">
           <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
-          <div class="navProject"></div>
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
+          <!-- <div class="navProject"></div> -->
         </div>
         <div id="social-container">
           <div class="socialIcon" target="_blank">f</div>
@@ -31,7 +32,37 @@
       </div>
       <div onClick="selectProject()" id="projectContent">
         <div id="projectBackC">
-          <p>826 super real store</p>
+          <div id="projectBackCBanner">
+            <p>826 super real store</p>
+          </div>
+          <div class="projectBackCContent">
+            <div class="contentModule">
+              <div class="grid">
+                <div class="left">
+                  <img src="/assets/diaImg.png" alt="diaImg" />
+                </div>
+                <div class="right">
+                  <img src="/assets/diaImg.png" alt="diaImg" />
+                  <img src="/assets/diaImg.png" alt="diaImg" />
+                  <img src="/assets/diaImg.png" alt="diaImg" />
+                  <img src="/assets/diaImg.png" alt="diaImg" />
+                </div>
+              </div>
+              <div class="textGrid">
+                <h3>product pattern generator</h3>
+                <div class="copyGrid">
+                <p>
+                  the identity centers around a generative collage tool
+                  programmed in Java using the Processing library.
+                </p>
+                <p>
+                  here’s a version translated and condensed to run in the browser.
+                </p>
+              </div>
+              </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="projectFrontC">
           <div id="thumbnail">
@@ -126,18 +157,6 @@
     "/assets/aaff.png",
     "/assets/dhs.png",
     "/assets/techno.png",
-    "/assets/826.png",
-    "/assets/aaff.png",
-    "/assets/dhs.png",
-    "/assets/techno.png",
-    "/assets/826.png",
-    "/assets/aaff.png",
-    "/assets/dhs.png",
-    "/assets/techno.png",
-    "/assets/826.png",
-    "/assets/aaff.png",
-    "/assets/dhs.png",
-    "/assets/techno.png",
   ];
 
   let isScrolling = false; // Flag to track the scrolling state
@@ -159,6 +178,8 @@
       imageIndex = roundedIndex;
       thumbnailImg.src = images[imageIndex];
     }
+
+    console.log(imageIndex);
 
     clearTimeout(window.scrollTimeout);
     window.scrollTimeout = setTimeout(() => {

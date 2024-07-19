@@ -7,12 +7,12 @@ function toggleScrollBehavior(pc) {
 function resizeTextToFit() {
   const paragraphs = document.querySelectorAll("#projectBackC p");
   const p = paragraphs[0];
-  let fontSize = 200;
+  let fontSize = 40;
   p.style.fontSize = fontSize + "px";
-  while (p.scrollWidth > p.clientWidth) {
-    fontSize--;
-    p.style.fontSize = fontSize + "px";
-  }
+  // while (p.scrollWidth > p.clientWidth) {
+  // fontSize--;
+  // p.style.fontSize = fontSize + "px";
+  // }
 }
 
 function resizeClip() {

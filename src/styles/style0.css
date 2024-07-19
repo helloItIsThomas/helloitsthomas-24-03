@@ -50,7 +50,6 @@ content {
 
 .layout0 {
   overflow: hidden;
-  /* background-color: yellow; */
   display: flex;
   /* flex-direction: column; */
   width: 100%;
@@ -58,7 +57,6 @@ content {
 }
 
 #mySpan {
-  background-color: yellow;
   align-self: flex-start;
   width: auto;
   display: inline-block;
@@ -74,18 +72,35 @@ content {
   width: 50px;
   height: 100%;
   right: 0;
-  border-left: 1px solid black;
-  /* background-color: white; */
   color: black;
 }
 
+#projectBackC {
+  width: 100%;
+  height: 100%;
+}
 #projectBackC p {
   width: 100%;
+  height: 100%;
+}
+
+#projectBackCBanner p {
+  width: 100%;
+  background-color: yellow;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   white-space: nowrap;
   text-align: center;
+}
+
+.projectBackCContent {
+  box-sizing: border-box;
+  background-color: orange;
+  margin-top: 100vh;
+  width: 100%;
+  height: auto;
+  /* padding: 20px; */
 }
 
 .knob {
@@ -103,11 +118,10 @@ content {
   height: 100%;
 }
 
-#projectBackC {
-  /* background-color: blue; */
+#projectBackCBanner {
+  top: 0;
   width: 100%;
   height: 100%;
-  /* padding-top: 5%; */
   position: absolute;
   z-index: 0;
 }
@@ -115,6 +129,7 @@ content {
   width: 100%;
   height: 100%;
   z-index: 1;
+  top: 0;
   position: absolute;
 }
 
@@ -134,9 +149,9 @@ content {
   display: flex;
   flex-direction: column;
   width: 50px;
-  padding-top: 60px;
+  padding-top: 100px;
   /* height: 100%; */
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
   color: black;
   /* box-sizing: border-box; */
   /* border-right: 1px solid black; */
@@ -156,7 +171,6 @@ content {
 }
 
 #slider-container {
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,8 +181,9 @@ content {
 }
 .navProject {
   background-color: black;
-  width: 1px;
+  width: 2px;
   height: 100%;
+  border-radius: 50px;
 }
 
 #navHandle {
@@ -244,7 +259,7 @@ content {
 
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .slider::-moz-range-thumb {
@@ -271,6 +286,7 @@ content {
   flex-direction: column;
   justify-content: center;
   margin: 10px;
+  padding-top: 80px;
 }
 .socialIcon {
   align-self: center;
