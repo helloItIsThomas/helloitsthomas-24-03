@@ -29,24 +29,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     knobElement.addEventListener("mousedown", function (event) {
-      event.preventDefault();
-      function onMouseMove(event) {
-        const rect = knobElement.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const deltaX = event.clientX - centerX;
-        const deltaY = event.clientY - centerY;
-        const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 90;
-        knobInstance.angle(angle);
-      }
-
-      function onMouseUp() {
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
-      }
-
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp);
+      // event.preventDefault();
+      // function onMouseMove(event) {
+      // const rect = knobElement.getBoundingClientRect();
+      // const centerX = rect.left + rect.width / 2;
+      // const centerY = rect.top + rect.height / 2;
+      // const deltaX = event.clientX - centerX;
+      // const deltaY = event.clientY - centerY;
+      // const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 90;
+      // knobInstance.angle(angle);
+      // }
+      //
+      // function onMouseUp() {
+      // document.removeEventListener("mousemove", onMouseMove);
+      // document.removeEventListener("mouseup", onMouseUp);
+      // }
+      //
+      // document.addEventListener("mousemove", onMouseMove);
+      // document.addEventListener("mouseup", onMouseUp);
     });
 
     // Scroll to turn functionality

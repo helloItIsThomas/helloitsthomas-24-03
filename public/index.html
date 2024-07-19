@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style0.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
     <link rel="stylesheet" href="/styles/contentModule.css" />
     <link rel="stylesheet" href="/styles/knob.css" />
+    <link rel="stylesheet" href="/styles/nav.css" />
+    <link rel="stylesheet" href="/styles/projectBackBanner.css" />
+    <link rel="stylesheet" href="/styles/projectBackContent.css" />
+    <link rel="stylesheet" href="/styles/projectFront.css" />
     <title id="page-title">home</title>
   </head>
   <body>
@@ -32,11 +36,15 @@
       </div>
       <div onClick="selectProject()" id="projectContent">
         <div id="projectBackC">
-          <div id="projectBackCBanner">
-            <p>youtube cherry</p>
-          </div>
-          <div id="projectBackCBannerImg">
-
+          <div class="projectBackCBanner">
+            <div class = "row1">
+              <div class = "pH">bud music</div>
+            </div>
+            <div class = "row2"></div>
+            <div class = "row3">
+              <p>___</p>
+              <p>the identity centers around a generative collage tool programmed in Java using the Processing library.</p>
+            </div>
           </div>
           <div class="projectBackCContent">
             <div class="contentModule">
@@ -134,7 +142,7 @@
   function selectProject() {
     resizeClip();
     // shrinkKnobBar();
-    toggleScrollBehavior(projectContent);
+    // toggleScrollBehavior(projectContent);
     console.log("click");
   }
 
