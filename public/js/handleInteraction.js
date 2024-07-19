@@ -5,10 +5,10 @@ function toggleScrollBehavior(pc) {
 }
 
 function resizeTextToFit() {
-  const paragraphs = document.querySelectorAll("#projectBackC p");
-  const p = paragraphs[0];
-  let fontSize = 40;
-  p.style.fontSize = fontSize + "px";
+  // const paragraphs = document.querySelectorAll("#projectBackC p");
+  // const p = paragraphs[0];
+  // let fontSize = 40;
+  // p.style.fontSize = fontSize + "px";
   // while (p.scrollWidth > p.clientWidth) {
   // fontSize--;
   // p.style.fontSize = fontSize + "px";
@@ -16,13 +16,14 @@ function resizeTextToFit() {
 }
 
 function resizeClip() {
-  const paragraphs = document.querySelectorAll("#projectBackC p");
-  const p = paragraphs[0];
-  const fontSizeRef = p.style.fontSize;
-  const topPaddingRef = window.getComputedStyle(
-    document.querySelector("#projectBackC")
-  ).paddingTop;
-  const clipPathValue = `rect(calc(calc(${fontSizeRef} + ${topPaddingRef}) + 5%) 0 95% 100% round 5vw)`;
+  // const paragraphs = document.getElementById("#projectBackCBanner");
+  const clipZone = window.getComputedStyle(
+    document.querySelector("#projectBackCBanner p")
+  ).height;
+  const clipZoneBottom = window.getComputedStyle(
+    document.querySelector("#projectBackCBanner")
+  ).height;
+  const clipPathValue = `rect(calc(calc(${clipZone}) + 0%) 0 ${clipZoneBottom} 100% round 5vw)`;
   const elementToClip = document.querySelector("#thumbnail img");
   elementToClip.style.clipPath = clipPathValue;
 }
