@@ -78,7 +78,7 @@ function resetClip() {
     duration: 0.0666,
     onUpdate: () => {
       const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
-      const elementToClip = document.querySelector("#thumbnail img");
+      const elementToClip = document.querySelector("#thumbnail");
 
       elementToClip.style.clipPath = clipPathValue;
     },
@@ -122,7 +122,7 @@ function resizeClip() {
     duration: 0.0666,
     onUpdate: () => {
       const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
-      const elementToClip = document.querySelector("#thumbnail img");
+      const elementToClip = document.querySelector("#thumbnail");
 
       elementToClip.style.clipPath = clipPathValue;
     },
