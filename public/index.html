@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="/js/gsap/gsap.min.js"></script>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -125,6 +126,28 @@
           <div id="thumbnail">
             <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
             <script>
+              const shaderClock = {
+                time: 1,
+              };
+            gsap.to(shaderClock, {
+                time: 0,
+                duration: 1.0,
+                onUpdate: () => {
+                  console.log(shaderClock.time);
+                  sandbox.setUniform("u_myTime", shaderClock.time);
+                },
+                onComplete: () => {
+                  gsap.to(shaderClock, {
+                    time: 1,
+                    duration: 0.33,
+                    onUpdate: () => {
+                      console.log(shaderClock.time);
+                      sandbox.setUniform("u_myTime", shaderClock.time);
+                    },
+                  });
+                },
+              });
+
               const canvas = document.querySelector('.glslCanvas');
               canvas.width = window.innerWidth;
               canvas.height = window.innerHeight;
