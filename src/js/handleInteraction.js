@@ -41,14 +41,6 @@ function toProject() {
   }
 }
 
-function toggleScrollBehavior() {
-  if (projectContent.style.overflowY === "scroll") {
-    // toHome();
-  } else {
-    // toProject();
-  }
-}
-
 function resetClip() {
   const parentHeight = window.getComputedStyle(
     document.querySelector(".projectBackCBanner")
