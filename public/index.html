@@ -123,14 +123,13 @@
         </div>
         <div id="projectFrontC">
           <div id="thumbnail">
-            <!-- <img src="/assets/diaImg.png" alt="diaImg" /> -->
-            <!-- <canvas id="glslCanv"></canvas> -->
             <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
             <script>
               const canvas = document.querySelector('.glslCanvas');
               canvas.width = window.innerWidth;
               canvas.height = window.innerHeight;
               const sandbox = new GlslCanvas(canvas);
+              sandbox.setUniform("u_tex", "/assets/diaImg.png");
             </script>
 
 
