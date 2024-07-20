@@ -24,8 +24,6 @@
       <div id="navBar">
         <div id="slider-container">
           <input type="range" min="0" max="100" step="10"  orient="vertical" class="vertical-slider">
-
-          <!-- <div class="navProject"></div> -->
         </div>
         <div id="social-container">
           <div class="socialIcon" target="_blank">f</div>
@@ -33,7 +31,7 @@
           <div class="socialIcon" target="_blank">t</div>
         </div>
       </div>
-      <div onClick="selectProject()" id="projectContent">
+      <div onClick="toProject()" id="projectContent">
         <div id="projectBackC">
           <div class="projectBackCBanner">
             <div class = "row1">
@@ -41,7 +39,52 @@
             </div>
             <div class = "row2"></div>
             <div class = "row3">
-              <p>___</p>
+              <div class="knobBarTwo">
+                <div>
+                  <div class="lightContainer">
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                  </div>
+                  <div class="knob"></div>
+                  <div class="knob-display">0.0</div>
+                </div>
+                <div>
+                  <div class="lightContainer">
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                  </div>
+                  <div class="knob"></div>
+                  <div class="knob-display">0.0</div>
+                </div>
+                <div>
+                  <div class="lightContainer">
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                  </div>
+                  <div class="knob"></div>
+                  <div class="knob-display">0.0</div>
+                </div>
+                <div>
+                  <div class="lightContainer">
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                    <div class="knobLight"></div>
+                  </div>
+                  <div class="knob"></div>
+                  <div class="knob-display">0.0</div>
+                </div>
+              </div>
               <p>the identity centers around a generative collage tool programmed in Java using the Processing library.</p>
             </div>
           </div>
@@ -139,16 +182,8 @@
 <script>
   let projectContent;
 
-  function selectProject() {
-    resizeClip();
-    // shrinkKnobBar();
-    // toggleScrollBehavior(projectContent);
-    console.log("click");
-  }
-
   window.addEventListener("load", () => {
     projectContent = document.querySelector("#projectContent");
-    resizeTextToFit();
     console.log("load");
   });
 
@@ -173,6 +208,9 @@
   let isScrolling = false; // Flag to track the scrolling state
 
   window.addEventListener("wheel", (event) => {
+    if(!globalState.isHome) {
+      return;
+    }
     if (!isScrolling) {
       console.log("Scrolling begins");
       isScrolling = true;

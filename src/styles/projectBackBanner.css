@@ -10,6 +10,16 @@
   padding-top: 10vh;
 }
 
+.projectBackCBanner {
+  width: 100%;
+  height: 99%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+
 .projectBackCBanner .row1,
 .projectBackCBanner .row2,
 .projectBackCBanner .row3 {
@@ -26,22 +36,12 @@
 .projectBackCBanner .row2 {
   height: 100%;
   display: grid;
-  background-color: red;
-  box-sizing: border-box;
-  border: 2px solid black;
+  /* background-color: red; */
+  /* box-sizing: border-box; */
+  /* border: 2px solid black; */
 }
 .projectBackCBanner .row3 {
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.projectBackCBanner {
-  width: 100%;
-  height: 99%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
 }
