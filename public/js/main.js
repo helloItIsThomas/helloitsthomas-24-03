@@ -102,12 +102,7 @@ let lastRoundedIndex = -1; // Keep track of the last rounded index
 const thumbnailImg = document.querySelector("#thumbnail img");
 console.log("thumbnailImg: " + thumbnailImg);
 
-const images = [
-  "/assets/826.png",
-  "/assets/aaff.png",
-  "/assets/dhs.png",
-  "/assets/techno.png",
-];
+const images = ["/assets/aaff.png", "/assets/dhs.png", "/assets/techno.png"];
 
 let isScrolling = false; // Flag to track the scrolling state
 const sensitivity = 0.1;
