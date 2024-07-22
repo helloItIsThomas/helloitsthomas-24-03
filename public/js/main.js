@@ -82,3 +82,54 @@ document.addEventListener("DOMContentLoaded", function () {
   //   clearInterval(incrementInterval);
   // });
 });
+
+let projectContent;
+
+window.addEventListener("load", () => {
+  projectContent = document.querySelector("#projectContent");
+  topFunction();
+});
+
+window.addEventListener("resize", () => {
+  // resizeTextToFit();
+  console.log("resize");
+});
+
+let scrollPos = 0;
+let imageIndex = 0;
+const mappingFactor = 200; // Mapping factor to control sensitivity
+let lastRoundedIndex = -1; // Keep track of the last rounded index
+const thumbnailImg = document.querySelector("#thumbnail img");
+console.log("thumbnailImg: " + thumbnailImg);
+
+const images = [
+  "/assets/826.png",
+  "/assets/aaff.png",
+  "/assets/dhs.png",
+  "/assets/techno.png",
+];
+
+let isScrolling = false; // Flag to track the scrolling state
+const sensitivity = 0.1;
+
+window.addEventListener("wheel", (event) => {
+  if (!globalState.isHome) {
+    return;
+  }
+
+  const delta = event.deltaY < 0 ? 1 : -1; // Convert wheel direction to increment/decrement factor
+  scrollPos += delta * sensitivity; // Increment or decrement based on scroll direction
+
+  let roundedIndex = Math.abs(Math.round(scrollPos) % images.length); // Ensure positive index
+
+  if (roundedIndex !== lastRoundedIndex) {
+    lastRoundedIndex = roundedIndex;
+    imageIndex = roundedIndex;
+    thumbnailImg.src = images[imageIndex];
+    clearTimeout(window.scrollTimeout);
+    window.scrollTimeout = setTimeout(() => {
+      // thumbnailImg.src = images[imageIndex];
+      console.log("Updated Image to index: ", imageIndex);
+    }, 150);
+  }
+});

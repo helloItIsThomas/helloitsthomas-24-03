@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<script src="/js/gsap/gsap.min.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta property=”og:url content=”https://github.com/timClicks/glsl-shader-intro” />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/contentModule.css" />
+    <link rel="stylesheet" href="/styles/knob.css" />
+    <link rel="stylesheet" href="/styles/nav.css" />
+    <link rel="stylesheet" href="/styles/projectBackBanner.css" />
+    <link rel="stylesheet" href="/styles/projectBackContent.css" />
+    <link rel="stylesheet" href="/styles/projectFront.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+    <title id="page-title">{{title}}</title>
+  </head>
+    <body>
+        <div class="layout0">
+            {% include "navbar.njk" %}
+            <div onClick="toProject()" id="projectContent">
+                {% include "projectBackC.njk" %}
+                {% include "projectFrontC.njk" %}
+            </div>
+            {% include "knobBar.njk" %}
+            <div id="logo">
+                <img src="/assets/hellologo.png" alt="hello logo" />
+            </div>
+        </div>
+        <script src="js/Knob.js"></script>
+        <script src="js/main.js"></script>
+        <script src="/js/handleInteraction.js"></script>
+    </body>
+</html>
+
+  

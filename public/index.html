@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <script src="/js/gsap/gsap.min.js"></script>
 <html lang="en">
@@ -19,253 +20,200 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
-    <title id="page-title">home</title>
-    
+    <title id="page-title">hello, it&#39;s thomas</title>
   </head>
-  <body>
-    <!-- <img id="textureImage" src="/assets/diaImg.png" style="display:none;"> -->
-    <div class="layout0">
-      <div id="navBar">
-        <div id="slider-container">
-          <input type="range" min="0" max="100" step="10"  orient="vertical" class="vertical-slider">
-        </div>
-        <div id="social-container">
-          <div class="socialIcon" target="_blank">f</div>
-          <div class="socialIcon" target="_blank">i</div>
-          <div class="socialIcon" target="_blank">t</div>
-        </div>
+    <body>
+        <div class="layout0">
+            <div id="navBar">
+  <div id="slider-container">
+    <input type="range" min="0" max="100" step="10"  orient="vertical" class="vertical-slider">
+  </div>
+  <div id="social-container">
+    <div class="socialIcon" target="_blank">f</div>
+    <div class="socialIcon" target="_blank">i</div>
+    <div class="socialIcon" target="_blank">t</div>
+  </div>
+</div>
+            <div onClick="toProject()" id="projectContent">
+                <div id="projectBackC">
+  <div class="projectBackCBanner">
+    <div class = "row1">
+      <div class = "pH">hello, it&#39;s thomas</div>
+    </div>
+    <div class = "row2"></div>
+    <div class = "row3">
+        <div class="knobBarTwo">
+  <div>
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+  <div>
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+  <div>
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+  <div>
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+</div>
+        <p>hello, it&#39;s thomas</p>
+    </div>
+  </div>
+  <div class="projectBackCContent">
+  <div class="contentModule">
+    <div class="grid">
+      <div class="left">
+        <img src="/assets/diaImg.png" alt="diaImg" />
       </div>
-      <div onClick="toProject()" id="projectContent">
-        <div id="projectBackC">
-          <div class="projectBackCBanner">
-            <div class = "row1">
-              <div class = "pH">bud music</div>
-            </div>
-            <div class = "row2"></div>
-            <div class = "row3">
-              <div class="knobBarTwo">
-                <div>
-                  <div class="lightContainer">
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                  </div>
-                  <div class="knob"></div>
-                  <div class="knob-display">0.0</div>
-                </div>
-                <div>
-                  <div class="lightContainer">
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                  </div>
-                  <div class="knob"></div>
-                  <div class="knob-display">0.0</div>
-                </div>
-                <div>
-                  <div class="lightContainer">
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                  </div>
-                  <div class="knob"></div>
-                  <div class="knob-display">0.0</div>
-                </div>
-                <div>
-                  <div class="lightContainer">
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                    <div class="knobLight"></div>
-                  </div>
-                  <div class="knob"></div>
-                  <div class="knob-display">0.0</div>
-                </div>
-              </div>
-              <p>the identity centers around a generative collage tool programmed in Java using the Processing library.</p>
-            </div>
-          </div>
-          <div class="projectBackCContent">
-            <div class="contentModule">
-              <div class="grid">
-                <div class="left">
-                  <img src="/assets/diaImg.png" alt="diaImg" />
-                </div>
-                <div class="right">
-                  <img src="/assets/diaImg.png" alt="diaImg" />
-                  <img src="/assets/diaImg.png" alt="diaImg" />
-                  <img src="/assets/diaImg.png" alt="diaImg" />
-                  <img src="/assets/diaImg.png" alt="diaImg" />
-                </div>
-              </div>
-              <div class="textGrid">
-                <h3>product pattern generator</h3>
-                <div class="copyGrid">
-                <p>
-                  the identity centers around a generative collage tool
-                  programmed in Java using the Processing library.
-                </p>
-                <p>
-                  here’s a version translated and condensed to run in the browser.
-                </p>
-              </div>
-              </p>
-              </div>
-            </div>
-          </div>
-          <div class="footer"></div>
-        </div>
-        <div id="projectFrontC">
-          <div id="thumbnail">
-            <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
-            <script>
-              const shaderClock = {
-                time: 1,
-              };
-            gsap.to(shaderClock, {
-                time: 0,
-                duration: 1.0,
-                onUpdate: () => {
-                  console.log(shaderClock.time);
-                  sandbox.setUniform("u_myTime", shaderClock.time);
-                },
-                onComplete: () => {
-                  gsap.to(shaderClock, {
-                    time: 1,
-                    duration: 0.33,
-                    onUpdate: () => {
-                      console.log(shaderClock.time);
-                      sandbox.setUniform("u_myTime", shaderClock.time);
-                    },
-                  });
-                },
-              });
-
-              const canvas = document.querySelector('.glslCanvas');
-              canvas.width = window.innerWidth;
-              canvas.height = window.innerHeight;
-              const sandbox = new GlslCanvas(canvas);
-              sandbox.setUniform("u_tex", "/assets/diaImg.png");
-            </script>
-
-
-          </div>
-        </div>
-      </div>
-      <div id="knobBar">
-        <div class="knob-container">
-          <div class="lightContainer">
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-          </div>
-          <div class="knob"></div>
-          <div class="knob-display">0.0</div>
-        </div>
-        <div class="knob-container">
-          <div class="lightContainer">
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-          </div>
-          <div class="knob"></div>
-          <div class="knob-display">0.0</div>
-        </div>
-        <div class="knob-container">
-          <div class="lightContainer">
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-          </div>
-          <div class="knob"></div>
-          <div class="knob-display">0.0</div>
-        </div>
-        <div class="knob-container">
-          <div class="lightContainer">
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-            <div class="knobLight"></div>
-          </div>
-          <div class="knob"></div>
-          <div class="knob-display">0.0</div>
-        </div>
-      </div>
-      <div id="logo">
-        <img src="/assets/hellologo.png" alt="hello logo" />
+      <div class="right">
+        <img src="/assets/diaImg.png" alt="diaImg" />
+        <img src="/assets/diaImg.png" alt="diaImg" />
+        <img src="/assets/diaImg.png" alt="diaImg" />
+        <img src="/assets/diaImg.png" alt="diaImg" />
       </div>
     </div>
-    
-    <script src="js/Knob.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <div class="textGrid">
+      <h3>product pattern generator</h3>
+      <div class="copyGrid">
+      <p>
+        hello, it&#39;s thomas
+      </p>
+      <p>
+        here’s a version translated and condensed to run in the browser.
+      </p>
+    </div>
+    </p>
+    </div>
+  </div>
+</div>
+  <div class="footer"></div>
+</div>
+                <div id="projectFrontC">
+  <div id="thumbnail">
+    <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
+    <img id="texImg" src="/assets/diaImg.png"></img>
+    <script>
+      const shaderClock = {
+        time: 1,
+      };
+    gsap.to(shaderClock, {
+        time: 0,
+        duration: 1.0,
+        onUpdate: () => {
+          sandbox.setUniform("u_myTime", shaderClock.time);
+        },
+        onComplete: () => {
+          gsap.to(shaderClock, {
+            time: 1,
+            duration: 0.33,
+            onUpdate: () => {
+              sandbox.setUniform("u_myTime", shaderClock.time);
+            },
+          });
+        },
+      });
+
+      const canvas = document.querySelector('.glslCanvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const sandbox = new GlslCanvas(canvas);
+      const thisImg = document.querySelector("#thumbnail img");
+      sandbox.setUniform("u_tex", thisImg.src);
+
+      window.addEventListener('resize', () => {
+      console.log("LOOK HERE " + thisImg.src);
+        sandbox.setUniform("u_tex", thisImg.src);
+      });
+    </script>
+  </div>
+</div>
+            </div>
+            <div id="knobBar">
+  <div class="knob-container">
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+  <div class="knob-container">
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+  <div class="knob-container">
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+  <div class="knob-container">
+    <div class="lightContainer">
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+      <div class="knobLight"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="knob-display">0.0</div>
+  </div>
+</div>
+            <div id="logo">
+                <img src="/assets/hellologo.png" alt="hello logo" />
+            </div>
+        </div>
+        <script src="js/Knob.js"></script>
+        <script src="js/main.js"></script>
+        <script src="/js/handleInteraction.js"></script>
+    </body>
 </html>
 
-<script>
-  let projectContent;
-
-  window.addEventListener("load", () => {
-    projectContent = document.querySelector("#projectContent");
-    topFunction();
-  });
-
-  window.addEventListener("resize", () => {
-    resizeTextToFit();
-    console.log("resize");
-  });
-
-  let scrollPos = 0;
-  let imageIndex = 0;
-  const mappingFactor = 200; // Mapping factor to control sensitivity
-  let lastRoundedIndex = -1; // Keep track of the last rounded index
-  const thumbnailImg = document.querySelector("#thumbnail img");
-
-  const images = [
-    "/assets/826.png",
-    "/assets/aaff.png",
-    "/assets/dhs.png",
-    "/assets/techno.png",
-  ];
-
-  let isScrolling = false; // Flag to track the scrolling state
-  const sensitivity = 0.1;
-
-  window.addEventListener("wheel", (event) => {
-  if(!globalState.isHome) {
-    return;
-  }
-
-  const delta = event.deltaY < 0 ? 1 : -1; // Convert wheel direction to increment/decrement factor
-  scrollPos += delta * sensitivity; // Increment or decrement based on scroll direction
-
-  let roundedIndex = Math.abs(Math.round(scrollPos) % images.length); // Ensure positive index
   
-  if (roundedIndex !== lastRoundedIndex) {
-    lastRoundedIndex = roundedIndex;
-    imageIndex = roundedIndex;
-    thumbnailImg.src = images[imageIndex];
-    clearTimeout(window.scrollTimeout);
-    window.scrollTimeout = setTimeout(() => {
-      // thumbnailImg.src = images[imageIndex];
-      console.log("Updated Image to index: ", imageIndex);
-    }, 150);
-  }
-});
-
-</script>
-<script src="/js/handleInteraction.js"></script>
-<script src="/js/gsap/gsap.min.js"></script>
