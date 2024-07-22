@@ -1,0 +1,10 @@
+<div class="app-image">
+  <div class="main-image">
+    <img src="{{ appImage.main.src }}" alt="{{ appImage.main.alt }}">
+  </div>
+  <div class="side-images">
+    {% for image in appImage.sideImages %}
+      <img src="{{ image.src }}" alt="{{ image.alt }}">
+    {% endfor %}
+  </div>
+</div>

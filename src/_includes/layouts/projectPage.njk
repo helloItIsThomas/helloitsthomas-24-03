@@ -1,0 +1,13 @@
+
+  <h1>{{ title }}</h1>
+  PROJECT PAGE
+  <h1>PROJECT PAGE</h1>
+  <div id="modules">
+    {% for module in modules %}
+      {# {% include "module.njk" with { module: module } %} #}
+      {% include "layouts/module.njk" %}
+    {% endfor %}
+  </div>
+  <script src="/js/main.js"></script>
+
+
