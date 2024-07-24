@@ -16,9 +16,9 @@ function toHome() {
   }
 }
 function toProject() {
+  console.log("TO PROJECT RUN");
   if (globalState.isHome) {
     globalState.isHome = false;
-    console.log("toProject");
     // const thumb = document.getElementById("projectContent");
     resizeClip();
     // shrinkKnobBar();

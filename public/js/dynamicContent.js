@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
-        console.log(" html: " + html);
         document.getElementById("projectContent").innerHTML = html;
       })
       .catch((error) => console.error("Error loading content:", error));

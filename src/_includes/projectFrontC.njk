@@ -1,10 +1,12 @@
 
 <div onClick="toProject()" id="frontC">
-{# <div id="frontC"> #}
   <div id="thumbnail">
     <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
     <img id="texImg" src="/assets/diaImg.png" style="display: none;"></img>
-    <script>
+  </div>
+</div>
+
+<script>
       const shaderClock = {
         time: 1,
       };
@@ -26,15 +28,17 @@
       });
 
       const canvas = document.querySelector('.glslCanvas');
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      {# const canvCont = window.getComputedStyle( #}
+        {# document.querySelector(".projectBackCBanner") #}
+      {# ).width; #}
+      {# console.log("canvCont.width " + canvCont); #}
+      {# canvas.width = 100; #}
       const sandbox = new GlslCanvas(canvas);
       const thisImg = document.querySelector("#thumbnail img");
       sandbox.setUniform("u_tex", thisImg.src);
 
       window.addEventListener('resize', () => {
+        console.log("resizing in projectFrontC ")
         sandbox.setUniform("u_tex", thisImg.src);
       });
     </script>
-  </div>
-</div>

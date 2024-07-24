@@ -93,6 +93,7 @@ window.addEventListener("load", () => {
 window.addEventListener("resize", () => {
   // resizeTextToFit();
   console.log("resize");
+  // resizeClip();
 });
 
 let scrollPos = 0;

@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   /* background-color: blue; */
+  background-color: blue;
   width: 100%;
+  /* width: 120px; */
   /* opacity: 0.1; */
   height: 100%;
 }
@@ -18,13 +20,20 @@
 #frontC {
   width: 100%;
   height: 100%;
-  z-index: 1;
-  top: 0;
+  z-index: 2;
+  /* top: 0; */
   position: absolute;
+}
+
+canvas {
+  min-width: none;
+  min-height: none;
+  width: 100%;
+  height: 100%;
 }
 
 #glslCanvas {
   /* background-color: blue; */
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
 }

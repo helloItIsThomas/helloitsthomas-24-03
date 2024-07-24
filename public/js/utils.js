@@ -8,7 +8,7 @@ function topFunction() {
     duration: 0.5, // Adjust duration as needed
     ease: "power2.inOut",
     onComplete: () => {
-      // resetClip();
+      resetClip();
     },
   });
 }
