@@ -3,7 +3,7 @@
   padding: 0;
   /* background-color: blue; */
   width: 100%;
-  opacity: 0.1;
+  /* opacity: 0.1; */
   height: 100%;
 }
 
@@ -15,7 +15,7 @@
   height: 100%;
 }
 
-#projectFrontC {
+#frontC {
   width: 100%;
   height: 100%;
   z-index: 1;

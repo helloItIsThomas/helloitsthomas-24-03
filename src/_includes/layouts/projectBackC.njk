@@ -1,3 +1,6 @@
+
+
+<title>{{ title }}</title>
 <div id="projectBackC">
   <div class="projectBackCBanner">
     <div class = "row1">
@@ -5,8 +8,9 @@
     </div>
     <div class = "row2"></div>
     <div class = "row3">
-        {% include "components/h-knobBar.njk" %}
-        <p>{{ title }}</p>
+        {# {% include "components/h-knobBar.njk" %} #}
+        <p>{{ copy }}</p>
+        {{ content | safe }}
     </div>
   </div>
   {% include "projectBackCContent.njk" %}

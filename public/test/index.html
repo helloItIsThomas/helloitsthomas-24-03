@@ -1,7 +1,8 @@
-<div id="projectFrontC">
+
+<div onClick="toProject()" id="frontC">
   <div id="thumbnail">
     <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
-    <img id="texImg" src="/assets/diaImg.png"></img>
+    <img id="texImg" src="/assets/diaImg.png" style="display: none;"></img>
     <script>
       const shaderClock = {
         time: 1,
@@ -31,7 +32,6 @@
       sandbox.setUniform("u_tex", thisImg.src);
 
       window.addEventListener('resize', () => {
-      console.log("LOOK HERE " + thisImg.src);
         sandbox.setUniform("u_tex", thisImg.src);
       });
     </script>

@@ -103,6 +103,11 @@ const thumbnailImg = document.querySelector("#thumbnail img");
 console.log("thumbnailImg: " + thumbnailImg);
 
 const images = ["/assets/aaff.png", "/assets/dhs.png", "/assets/techno.png"];
+const links = [
+  "/projects/project1",
+  "/projects/project2",
+  "/projects/project3",
+];
 
 let isScrolling = false; // Flag to track the scrolling state
 const sensitivity = 0.1;
