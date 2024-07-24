@@ -1,0 +1,39 @@
+<div id="projectFrontC">
+  <div id="thumbnail">
+    <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
+    <img id="texImg" src="/assets/diaImg.png"></img>
+    <script>
+      const shaderClock = {
+        time: 1,
+      };
+    gsap.to(shaderClock, {
+        time: 0,
+        duration: 1.0,
+        onUpdate: () => {
+          sandbox.setUniform("u_myTime", shaderClock.time);
+        },
+        onComplete: () => {
+          gsap.to(shaderClock, {
+            time: 1,
+            duration: 0.33,
+            onUpdate: () => {
+              sandbox.setUniform("u_myTime", shaderClock.time);
+            },
+          });
+        },
+      });
+
+      const canvas = document.querySelector('.glslCanvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const sandbox = new GlslCanvas(canvas);
+      const thisImg = document.querySelector("#thumbnail img");
+      sandbox.setUniform("u_tex", thisImg.src);
+
+      window.addEventListener('resize', () => {
+      console.log("LOOK HERE " + thisImg.src);
+        sandbox.setUniform("u_tex", thisImg.src);
+      });
+    </script>
+  </div>
+</div>

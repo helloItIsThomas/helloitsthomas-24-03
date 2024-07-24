@@ -20,24 +20,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
-    <title id="page-title">{{title}}</title>
+    <title id="page-title">{{ title }}</title>
   </head>
     <body>
         <div class="layout0">
             {% include "components/navbar.njk" %}
-            <div onClick="toProject()" id="projectContent">
-                {% include "layouts/projectPage.njk" %}
+            {# <div onClick="toProject()" id="projectContent"> #}
+                {# This line should be removed as it's causing a direct inclusion #}
+                {# {% include "layouts/projectPage.njk" %} #}
+                {# Instead, the content from index.md should automatically use projectPage.njk layout #}
                 {# {% include "projectBackC.njk" %} #}
                 {# {% include "projectFrontC.njk" %} #}
-            </div>
+            {# </div> #}
             {% include "components/knobBar.njk" %}
             <div id="logo">
                 <img src="/assets/hellologo.png" alt="hello logo" />
             </div>
         </div>
-        <script src="/js/Knob.js"></script>
-        <script src="/js/main.js"></script>
-        <script src="/js/handleInteraction.js"></script>
+
+        {# <script src="/js/Knob.js"></script> #}
+        {# <script src="/js/main.js"></script> #}
+        {# <script src="/js/handleInteraction.js"></script> #}
     </body>
 </html>
 
