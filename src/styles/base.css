@@ -22,34 +22,50 @@ body {
   height: 100%;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .imgFullW {
   width: 100%;
 }
 
 .layout0 {
-  /* overflow: hidden; */
-  display: flex;
+  margin: 0;
+  padding: 0;
+  /* overflow: scroll; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: tomato;
   width: 100%;
+  /* height: auto; */
   height: 100%;
 }
 
 #projectContent {
-  overflow-y: hidden;
-  position: relative;
+  /* overflow-y: hidden; */
+  /* position: relative; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
 }
 
 #projectContainer {
+  background-color: blueviolet;
   display: flex;
+  opacity: 0.5;
+  /* position: fixed; */
   /* width: 200px; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  overflow: visible;
 }
 
 #topAndBottomContent {
   display: flex;
-  position: relative;
+  /* position: relative; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
 }

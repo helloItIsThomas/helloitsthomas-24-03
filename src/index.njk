@@ -2,52 +2,62 @@
 <script src="/js/gsap/gsap.min.js"></script>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta property=”og:url content=”https://github.com/timClicks/glsl-shader-intro” />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link rel="stylesheet" href="/styles/contentModule.css" />
-    <link rel="stylesheet" href="/styles/knob.css" />
-    <link rel="stylesheet" href="/styles/nav.css" />
-    <link rel="stylesheet" href="/styles/projectBackBanner.css" />
-    <link rel="stylesheet" href="/styles/projectBackContent.css" />
-    <link rel="stylesheet" href="/styles/projectFront.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
-    <link rel="stylesheet" href="/styles/fonts.css" />
+    <meta charset="UTF-8"/>
+    <meta property=”og:url content=”https://github.com/timClicks/glsl-shader-intro”/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/styles/base.css"/>
+    <link rel="stylesheet" href="/styles/contentModule.css"/>
+    <link rel="stylesheet" href="/styles/knob.css"/>
+    <link rel="stylesheet" href="/styles/nav.css"/>
+    <link rel="stylesheet" href="/styles/projectBackBanner.css"/>
+    <link rel="stylesheet" href="/styles/projectBackContent.css"/>
+    <link rel="stylesheet" href="/styles/projectFront.css"/>
+    <link rel="stylesheet" href="/styles/footer.css"/>
+    <link rel="stylesheet" href="/styles/fonts.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
     <title id="page-title">{{ title }}</title>
   </head>
-<body>
-  <div class="layout0">  
-    <div id="projectContainer">
-      {% include "components/navbar.njk" %}
-      <div id="topAndBottomContent">
-        {# <nav> #}
-          {# <ul> #}
-            {# <li><a href="/projects/project1" class="project-link">Project 1</a></li> #}
-            {# <li><a href="/projects/project2" class="project-link">Project 2</a></li> #}
-            {# <li><a href="/projects/project3" class="project-link">Project 3</a></li> #}
-          {# </ul> #}
-        {# </nav> #}
-      <div id="projectContent"></div>
-      {% include "projectFrontC.njk" %}
+  <body>
+    <div class="layout0">
+      {# ^ tomato ^ #}
+      <div id="projectContainer">
+        {# ^ violet ^ #}
+        {% include "components/navbar.njk" %}
+        {# <div id="topAndBottomContent"></div> #}
+        {# {% include "projectFrontC.njk" %} #}
+        {# <h1>hello</h1> #}
+        {% include "components/knobBar.njk" %}
+      </div>
+      {# <div id="projectContent"></div> #}
+
+      {# <div id="logo"> #}
+      {# <img src="/assets/hellologo.png" alt="hello logo"/> #}
+      {# </div> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
+      {# <h1>hello</h1> #}
     </div>
-    {% include "components/knobBar.njk" %}
-  </div>
-  <div id="logo">
-    <img src="/assets/hellologo.png" alt="hello logo" />
-  </div>
-</div>
-</body>
+  </body>
 </html>
 
 <script src="/js/dynamicContent.js"></script>
-<script src="/js/Knob.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/utils.js"></script>
-<script src="/js/editClip.js"></script>
-<script src="/js/handleInteraction.js"></script>
+{# <script src="/js/Knob.js"></script> #}
+{# <script src="/js/main.js"></script> #}
+{# <script src="/js/utils.js"></script> #}
+{# <script src="/js/editClip.js"></script> #}
+{# <script src="/js/handleInteraction.js"></script> #}

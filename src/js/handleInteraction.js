@@ -10,7 +10,7 @@ function toHome() {
     topFunction();
     globalState.isHome = true;
     console.log("toHome");
-    projectContent.style.overflowY = "hidden";
+    // projectContent.style.overflowY = "hidden";
     const thumb = document.getElementById("frontC");
     thumb.style.display = "block";
   }
@@ -22,7 +22,8 @@ function toProject() {
     // const thumb = document.getElementById("projectContent");
     resizeClip();
     // shrinkKnobBar();
-    projectContent.style.overflowY = "scroll";
+    // projectContent.style.overflowY = "scroll";
+    // projectContent.style.overflowY = "visible";
   }
 }
 

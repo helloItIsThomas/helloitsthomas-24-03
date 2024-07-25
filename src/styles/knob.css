@@ -6,7 +6,6 @@
   /* HEIGHT USED TO BE  */
   height: auto;
   /* USED TO BE ABOVE  */
-  background-color: tomato;
   box-sizing: border-box;
   padding: 10px;
   flex-direction: column;
@@ -71,7 +70,6 @@
   color: black;
   width: 100%;
   height: auto;
-  /* background-color: tomato; */
 }
 
 .knobBarTwo {
@@ -81,7 +79,6 @@
   text-align: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  /* background-color: orange; */
 }
 
 #knobBar {
@@ -91,9 +88,8 @@
   justify-content: center;
   align-items: center;
   /* gap: 20px; */
-  /* background-color: blue; */
   width: auto;
-  height: 100%;
+  height: 100vh;
   right: 0;
   color: black;
 }

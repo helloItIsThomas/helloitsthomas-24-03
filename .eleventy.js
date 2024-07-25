@@ -20,6 +20,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       output: "public",
     },
-    watch: false,
+    // watch: false,
+    watch: true,
   };
 };

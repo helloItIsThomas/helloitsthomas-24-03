@@ -2,29 +2,31 @@
 <script src="/js/gsap/gsap.min.js"></script>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta property=”og:url content=”https://github.com/timClicks/glsl-shader-intro” />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link rel="stylesheet" href="/styles/contentModule.css" />
-    <link rel="stylesheet" href="/styles/knob.css" />
-    <link rel="stylesheet" href="/styles/nav.css" />
-    <link rel="stylesheet" href="/styles/projectBackBanner.css" />
-    <link rel="stylesheet" href="/styles/projectBackContent.css" />
-    <link rel="stylesheet" href="/styles/projectFront.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
-    <link rel="stylesheet" href="/styles/fonts.css" />
+    <meta charset="UTF-8"/>
+    <meta property=”og:url content=”https://github.com/timClicks/glsl-shader-intro”/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/styles/base.css"/>
+    <link rel="stylesheet" href="/styles/contentModule.css"/>
+    <link rel="stylesheet" href="/styles/knob.css"/>
+    <link rel="stylesheet" href="/styles/nav.css"/>
+    <link rel="stylesheet" href="/styles/projectBackBanner.css"/>
+    <link rel="stylesheet" href="/styles/projectBackContent.css"/>
+    <link rel="stylesheet" href="/styles/projectFront.css"/>
+    <link rel="stylesheet" href="/styles/footer.css"/>
+    <link rel="stylesheet" href="/styles/fonts.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
     <title id="page-title"></title>
   </head>
-<body>
-  <div class="layout0">  
-    <div id="projectContainer">
-      <div id="navBar">
+  <body>
+    <div class="layout0">
+      
+      <div id="projectContainer">
+        
+        <div id="navBar">
   <div id="slider-container">
     <input type="range" min="0" max="100" step="10"  orient="vertical" class="vertical-slider">
   </div>
@@ -34,61 +36,10 @@
     <div class="socialIcon" target="_blank">t</div>
   </div>
 </div>
-      <div id="topAndBottomContent">
         
-          
-            
-            
-            
-          
         
-      <div id="projectContent"></div>
-      
-<div onClick="toProject()" id="frontC">
-  <div id="thumbnail">
-    <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
-    <img id="texImg" src="/assets/diaImg.png" style="display: none;"></img>
-  </div>
-</div>
-
-<script>
-      const shaderClock = {
-        time: 1,
-      };
-    gsap.to(shaderClock, {
-        time: 0,
-        duration: 1.0,
-        onUpdate: () => {
-          sandbox.setUniform("u_myTime", shaderClock.time);
-        },
-        onComplete: () => {
-          gsap.to(shaderClock, {
-            time: 1,
-            duration: 0.33,
-            onUpdate: () => {
-              sandbox.setUniform("u_myTime", shaderClock.time);
-            },
-          });
-        },
-      });
-
-      const canvas = document.querySelector('.glslCanvas');
-      
         
-      
-      
-      
-      const sandbox = new GlslCanvas(canvas);
-      const thisImg = document.querySelector("#thumbnail img");
-      sandbox.setUniform("u_tex", thisImg.src);
-
-      window.addEventListener('resize', () => {
-        console.log("resizing in projectFrontC ")
-        sandbox.setUniform("u_tex", thisImg.src);
-      });
-    </script>
-    </div>
-    <div id="knobBar">
+        <div id="knobBar">
   <div class="knob-container">
     <div class="lightContainer">
       <div class="knobLight"></div>
@@ -134,17 +85,32 @@
     <div class="knob-display">0.0</div>
   </div>
 </div>
-  </div>
-  <div id="logo">
-    <img src="/assets/hellologo.png" alt="hello logo" />
-  </div>
-</div>
-</body>
+      </div>
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
 </html>
 
 <script src="/js/dynamicContent.js"></script>
-<script src="/js/Knob.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/utils.js"></script>
-<script src="/js/editClip.js"></script>
-<script src="/js/handleInteraction.js"></script>
+
+
+
+
