@@ -36,17 +36,14 @@
   flex-direction: column;
   justify-content: flex-end;
   font-size: 3vw;
-  background-color: blue;
 }
 .projectBackCBanner .row2 {
   height: 100%;
   display: grid;
-  background-color: red;
   /* box-sizing: border-box; */
   /* border: 2px solid black; */
 }
 .projectBackCBanner .row3 {
-  background-color: green;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -1,38 +1,50 @@
 <div onClick="toProject()" id="frontC">
   <div id="thumbnail">
-    <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
-    <img id="texImg" src="/assets/diaImg.png" style="display: none;"></img>
+    {# <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag" data-vertex-url="/shaders/shader.vert"></canvas> #}
+    {# <img id="texImg" src="/assets/diaImg.png" style="display: none;"></img> #}
+    <img id="texImg" src="/assets/diaImg.png"></img>
   </div>
 </div>
 
 <script>
-  const shaderClock = {
-    time: 1
-  };
-  gsap.to(shaderClock, {
-    time: 0,
-    duration: 1.0,
-    onUpdate: () => {
-      sandbox.setUniform("u_myTime", shaderClock.time);
-    },
-    onComplete: () => {
-      gsap.to(shaderClock, {
-        time: 1,
-        duration: 0.33,
-        onUpdate: () => {
-          sandbox.setUniform("u_myTime", shaderClock.time);
-        }
-      });
-    }
-  });
+  // const shaderClock = {
+  //   time: 1
+  // };
+  // gsap.to(shaderClock, {
+  //   time: 0,
+  //   duration: 1.0,
+  //   onUpdate: () => {
+  //     sandbox.setUniform("u_myTime", shaderClock.time);
+  //   },
+  //   onComplete: () => {
+  //     gsap.to(shaderClock, {
+  //       time: 1,
+  //       duration: 0.33,
+  //       onUpdate: () => {
+  //         sandbox.setUniform("u_myTime", shaderClock.time);
+  //       }
+  //     });
+  //   }
+  // });
 
-  const canvas = document.querySelector('.glslCanvas');
-  const sandbox = new GlslCanvas(canvas);
-  const thisImg = document.querySelector("#thumbnail img");
-  sandbox.setUniform("u_tex", thisImg.src);
+  // const canvas = document.querySelector('.glslCanvas');
+  // const sandbox = new GlslCanvas(canvas);
+  // const thisImg = document.querySelector("#thumbnail img");
+
+  // sandbox.setUniform("u_tex", thisImg.src);
+  // sandbox.setUniform("u_texSize", [thisImg.width, thisImg.height]);
+  // sandbox.setUniform("u_texSizeNorm", [
+  //   thisImg.width / canvas.width,
+  //   thisImg.height / canvas.height
+  // ]);
+  // sandbox.setUniform("u_resolution", [canvas.width, canvas.height]);
+  // sandbox.setUniform("u_resolutionNorm", [
+  //   canvas.width / canvas.width,
+  //   canvas.height / canvas.height
+  // ]);
 
   window.addEventListener('resize', () => {
-    console.log("resizing in projectFrontC ")
-    sandbox.setUniform("u_tex", thisImg.src);
+    console.log("resizing in projectFrontC ");
+    // sandbox.setUniform("u_tex", thisImg.src);
   });
 </script>

@@ -92,6 +92,8 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", () => {
   // resizeTextToFit();
+  // instantClipReset();
+  instantClipSet();
   console.log("resize");
   // resizeClip();
 });
@@ -117,6 +119,7 @@ window.addEventListener("wheel", (event) => {
   if (!globalState.isHome) {
     return;
   }
+  // sandbox.setUniform("u_tex", thisImg.src);
 
   const delta = event.deltaY < 0 ? 1 : -1; // Convert wheel direction to increment/decrement factor
   scrollPos += delta * sensitivity; // Increment or decrement based on scroll direction
@@ -129,7 +132,6 @@ window.addEventListener("wheel", (event) => {
     thumbnailImg.src = images[imageIndex];
     clearTimeout(window.scrollTimeout);
     window.scrollTimeout = setTimeout(() => {
-      // thumbnailImg.src = images[imageIndex];
       console.log("Updated Image to index: ", imageIndex);
     }, 150);
   }
