@@ -1,8 +1,9 @@
 #projectBackC {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   /* height: 100%; */
-  background-color: tomato;
+  height: 100vh;
+  /* background-color: tomato; */
 }
 
 .pH {
@@ -35,15 +36,17 @@
   flex-direction: column;
   justify-content: flex-end;
   font-size: 3vw;
+  background-color: blue;
 }
 .projectBackCBanner .row2 {
   height: 100%;
   display: grid;
-  /* background-color: red; */
+  background-color: red;
   /* box-sizing: border-box; */
   /* border: 2px solid black; */
 }
 .projectBackCBanner .row3 {
+  background-color: green;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

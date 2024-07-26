@@ -1,4 +1,3 @@
-
 <div onClick="toProject()" id="frontC">
   <div id="thumbnail">
     <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag"></canvas>
@@ -7,38 +6,33 @@
 </div>
 
 <script>
-      const shaderClock = {
+  const shaderClock = {
+    time: 1
+  };
+  gsap.to(shaderClock, {
+    time: 0,
+    duration: 1.0,
+    onUpdate: () => {
+      sandbox.setUniform("u_myTime", shaderClock.time);
+    },
+    onComplete: () => {
+      gsap.to(shaderClock, {
         time: 1,
-      };
-    gsap.to(shaderClock, {
-        time: 0,
-        duration: 1.0,
+        duration: 0.33,
         onUpdate: () => {
           sandbox.setUniform("u_myTime", shaderClock.time);
-        },
-        onComplete: () => {
-          gsap.to(shaderClock, {
-            time: 1,
-            duration: 0.33,
-            onUpdate: () => {
-              sandbox.setUniform("u_myTime", shaderClock.time);
-            },
-          });
-        },
+        }
       });
+    }
+  });
 
-      const canvas = document.querySelector('.glslCanvas');
-      {# const canvCont = window.getComputedStyle( #}
-        {# document.querySelector(".projectBackCBanner") #}
-      {# ).width; #}
-      {# console.log("canvCont.width " + canvCont); #}
-      {# canvas.width = 100; #}
-      const sandbox = new GlslCanvas(canvas);
-      const thisImg = document.querySelector("#thumbnail img");
-      sandbox.setUniform("u_tex", thisImg.src);
+  const canvas = document.querySelector('.glslCanvas');
+  const sandbox = new GlslCanvas(canvas);
+  const thisImg = document.querySelector("#thumbnail img");
+  sandbox.setUniform("u_tex", thisImg.src);
 
-      window.addEventListener('resize', () => {
-        console.log("resizing in projectFrontC ")
-        sandbox.setUniform("u_tex", thisImg.src);
-      });
-    </script>
+  window.addEventListener('resize', () => {
+    console.log("resizing in projectFrontC ")
+    sandbox.setUniform("u_tex", thisImg.src);
+  });
+</script>

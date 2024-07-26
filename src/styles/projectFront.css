@@ -1,10 +1,7 @@
 #thumbnail {
   margin: 0;
   padding: 0;
-  /* background-color: blue; */
-  background-color: blue;
   width: 100%;
-  /* width: 120px; */
   opacity: 0.1;
   height: 100%;
 }
@@ -18,11 +15,10 @@
 }
 
 #frontC {
+  position: absolute;
+  z-index: 10;
   width: 100%;
   height: 100%;
-  z-index: 2;
-  /* top: 0; */
-  position: absolute;
 }
 
 canvas {
@@ -30,10 +26,4 @@ canvas {
   min-height: none;
   width: 100%;
   height: 100%;
-}
-
-#glslCanvas {
-  /* background-color: blue; */
-  /* width: 100%; */
-  /* height: 100%; */
 }
