@@ -1,7 +1,3 @@
-const globalState = {
-  isHome: true,
-};
-
 function topFunction() {
   gsap.to(tbc, {
     scrollTop: 0,

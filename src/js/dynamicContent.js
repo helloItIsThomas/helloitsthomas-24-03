@@ -1,15 +1,15 @@
+const loadContent = (url) => {
+  console.log("Loading content from:  " + url);
+  fetch(url)
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("projectContent").innerHTML = html;
+    })
+    .catch((error) => console.error("Error loading content:", error));
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded with JavaScript");
-
-  // Function to load content
-  const loadContent = (url) => {
-    fetch(url)
-      .then((response) => response.text())
-      .then((html) => {
-        document.getElementById("projectContent").innerHTML = html;
-      })
-      .catch((error) => console.error("Error loading content:", error));
-  };
 
   loadContent("/projects/project1");
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeButton.addEventListener("click", (event) => {
       console.log(" Home button clicked ");
       event.preventDefault();
-      loadContent("/projects/project1");
+      // loadContent("/projects/project1");
     });
   }
 });

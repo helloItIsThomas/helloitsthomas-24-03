@@ -93,24 +93,18 @@ window.addEventListener("load", () => {
 window.addEventListener("resize", () => {
   // resizeTextToFit();
   // instantClipReset();
-  instantClipSet();
+  if (globalState.isHome) {
+    instantClipReset();
+  } else instantClipSet();
   console.log("resize");
   // resizeClip();
 });
 
 let scrollPos = 0;
-let imageIndex = 0;
 const mappingFactor = 200; // Mapping factor to control sensitivity
 let lastRoundedIndex = -1; // Keep track of the last rounded index
 const thumbnailImg = document.querySelector("#thumbnail img");
 console.log("thumbnailImg: " + thumbnailImg);
-
-const images = ["/assets/aaff.png", "/assets/dhs.png", "/assets/techno.png"];
-const links = [
-  "/projects/project1",
-  "/projects/project2",
-  "/projects/project3",
-];
 
 let isScrolling = false; // Flag to track the scrolling state
 const sensitivity = 0.1;

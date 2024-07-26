@@ -1,7 +1,7 @@
 ---
-title: "Project 1 FROM MARKDOWN"
+title: "Project 0 FROM MARKDOWN"
 layout: "layouts/projectBackC.njk"
-copy: " °° this is the copy for project one °° "
+description: "description for project ZERO"
 ---
 
-### project 1 content
+### project 0 content
