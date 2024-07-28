@@ -10,5 +10,15 @@
     </div>
   </div>
   <div class="projectBackCContent">
-    {{ content | safe }}
+    {% for component in components %}
+      {% if component.type == 'imageTile' %}
+        {% include "layouts/subModules/imageTile.njk" %}
+      {% elif component.type == 'appImage' %}
+        {% include "layouts/subModules/appImage.njk" %}
+      {% elif component.type == 'fullWidthImage' %}
+        {% include "layouts/subModules/fullWidthImage.njk" %}
+      {% elif component.type == 'text' %}
+        {% include "layouts/subModules/text.njk" %}
+      {% endif %}
+    {% endfor %}
   </div>

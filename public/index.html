@@ -29,9 +29,15 @@
     <input type="range" min="0" max="100" step="10"  orient="vertical" class="vertical-slider">
   </div>
   <div id="social-container">
-    <div class="socialIcon" target="_blank">f</div>
-    <div class="socialIcon" target="_blank">i</div>
-    <div class="socialIcon" target="_blank">t</div>
+    <div class="socialIcon" target="_blank">
+      <img src="/assets/social-icons/git.png">
+    </div>
+    <div class="socialIcon" target="_blank">
+      <img src="/assets/social-icons/insta.png">
+    </div>
+    <div class="socialIcon" target="_blank">
+      <img src="/assets/social-icons/linked.png">
+    </div>
   </div>
 </div>
         <div id="topAndBottomContent">
@@ -39,53 +45,9 @@
           <div onClick="toProject()" id="frontC">
   <div id="thumbnail">
     
-    
     <img id="texImg" src="/assets/diaImg.png"></img>
   </div>
 </div>
-
-<script>
-  // const shaderClock = {
-  //   time: 1
-  // };
-  // gsap.to(shaderClock, {
-  //   time: 0,
-  //   duration: 1.0,
-  //   onUpdate: () => {
-  //     sandbox.setUniform("u_myTime", shaderClock.time);
-  //   },
-  //   onComplete: () => {
-  //     gsap.to(shaderClock, {
-  //       time: 1,
-  //       duration: 0.33,
-  //       onUpdate: () => {
-  //         sandbox.setUniform("u_myTime", shaderClock.time);
-  //       }
-  //     });
-  //   }
-  // });
-
-  // const canvas = document.querySelector('.glslCanvas');
-  // const sandbox = new GlslCanvas(canvas);
-  // const thisImg = document.querySelector("#thumbnail img");
-
-  // sandbox.setUniform("u_tex", thisImg.src);
-  // sandbox.setUniform("u_texSize", [thisImg.width, thisImg.height]);
-  // sandbox.setUniform("u_texSizeNorm", [
-  //   thisImg.width / canvas.width,
-  //   thisImg.height / canvas.height
-  // ]);
-  // sandbox.setUniform("u_resolution", [canvas.width, canvas.height]);
-  // sandbox.setUniform("u_resolutionNorm", [
-  //   canvas.width / canvas.width,
-  //   canvas.height / canvas.height
-  // ]);
-
-  window.addEventListener('resize', () => {
-    console.log("resizing in projectFrontC ");
-    // sandbox.setUniform("u_tex", thisImg.src);
-  });
-</script>
         </div>
         <div id="knobBar">
   <div class="knob-container">
