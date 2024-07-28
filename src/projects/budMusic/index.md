@@ -1,7 +1,7 @@
 ---
-title: "Project 0 FROM MARKDOWN"
+title: "bud music suite"
+description: " "
 layout: "layouts/projectBackC.njk"
-description: "description for project ZERO"
 components:
   - type: imageTile
     data:

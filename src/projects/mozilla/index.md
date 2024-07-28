@@ -1,5 +1,5 @@
 ---
-title: "TWO TWO TWO "
+title: "mozilla suite"
 layout: "layouts/projectBackC.njk"
 description: "TWO description for project TWO"
 ---

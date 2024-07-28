@@ -11,7 +11,7 @@ const loadContent = (url) => {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded with JavaScript");
 
-  loadContent("/projects/project1");
+  loadContent("/projects/budMusic");
 
   // Event listener for project links
   document.querySelectorAll(".project-link").forEach((link) => {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeButton.addEventListener("click", (event) => {
       console.log(" Home button clicked ");
       event.preventDefault();
-      // loadContent("/projects/project1");
+      // loadContent("/projects/budMusic");
     });
   }
 });
