@@ -1,0 +1,14 @@
+.text-module {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+.text-grid p {
+  margin: 0;
+}

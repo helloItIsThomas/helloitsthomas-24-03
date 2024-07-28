@@ -1,5 +1,5 @@
 <div class="image-tile">
-  {% for row in imageTile.rows %}
+  {% for row in component.data.rows %}
     <div class="row">
       {% for image in row.images %}
         <img src="{{ image.src }}" alt="{{ image.alt }}">

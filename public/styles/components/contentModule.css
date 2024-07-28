@@ -42,12 +42,3 @@
   width: 100%;
   height: 100%;
 }
-
-.textGrid {
-  color: white;
-}
-
-.copyGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}

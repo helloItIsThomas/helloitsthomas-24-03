@@ -2,5 +2,9 @@
   {% if component.data.headline %}
     <h2>{{ component.data.headline }}</h2>
   {% endif %}
-  <p>{{ component.data.content }}</p>
+  <div class="text-grid">
+    {% for p in component.data.cols %}
+      <p>{{ p.src }}</p>
+    {% endfor %}
+  </div>
 </div>
