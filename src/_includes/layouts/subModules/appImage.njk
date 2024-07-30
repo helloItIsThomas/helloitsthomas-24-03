@@ -1,11 +1,27 @@
 <div class="contentModule">
   <div class="grid">
     <div class="left">
-      <img src="{{ component.mainSrc }}" alt="{{ appImage.main.alt }}">
+      {% if component
+        .mainSrc
+        .endsWith('.mov')or component
+        .mainSrc
+        .endsWith('.mp4') %}
+        <video playsinline class="imgFullW" src="{{ component.mainSrc }}" alt="{{ appImage.main.alt }}" controls></video>
+      {% else %}
+        <img src="{{ component.mainSrc }}" alt="{{ appImage.main.alt }}">
+      {% endif %}
     </div>
     <div class="right">
       {% for image in component.sideImages %}
-        <img src="{{ image.src }}" alt="{{ image.alt }}">
+        {% if image
+          .src
+          .endsWith('.mov')or image
+          .src
+          .endsWith('.mp4') %}
+          <video playsinline class="imgFullW" src="{{ image.src }}" alt="{{ image.alt }}" controls></video>
+        {% else %}
+          <img src="{{ image.src }}" alt="{{ image.alt }}">
+        {% endif %}
       {% endfor %}
     </div>
   </div>

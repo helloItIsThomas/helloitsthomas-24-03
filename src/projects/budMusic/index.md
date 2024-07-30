@@ -33,7 +33,7 @@ modules:
       - type: appImage
         mainSrc: "assets/dhs.png"
         sideImages:
-          - src: "assets/dhs.png"
+          - src: "assets/projects/snickers/logoD1.mp4"
             alt: "side img 1"
           - src: "assets/dhs.png"
             alt: "side image 2"
