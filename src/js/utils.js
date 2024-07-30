@@ -1,7 +1,16 @@
 function topFunction() {
+  const distance = tbc.scrollTop; // Distance from the top
+  const maxDistance = tbc.scrollHeight - tbc.clientHeight;
+  const minDuration = 0.1;
+  const maxDuration = 2.0;
+
+  const d =
+    (distance / maxDistance) * (maxDuration - minDuration) + minDuration;
+  console.log(d);
+
   gsap.to(tbc, {
     scrollTop: 0,
-    duration: 0.5, // Adjust duration as needed
+    duration: d,
     ease: "power2.inOut",
     onComplete: () => {
       resetClip();

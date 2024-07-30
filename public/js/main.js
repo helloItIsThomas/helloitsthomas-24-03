@@ -101,13 +101,12 @@ window.addEventListener("resize", () => {
 });
 
 let scrollPos = 0;
-const mappingFactor = 200; // Mapping factor to control sensitivity
 let lastRoundedIndex = -1; // Keep track of the last rounded index
 const thumbnailImg = document.querySelector("#thumbnail img");
 console.log("thumbnailImg: " + thumbnailImg);
 
 let isScrolling = false; // Flag to track the scrolling state
-const sensitivity = 0.1;
+const sensitivity = 0.05;
 
 window.addEventListener("wheel", (event) => {
   if (!globalState.isHome) {
