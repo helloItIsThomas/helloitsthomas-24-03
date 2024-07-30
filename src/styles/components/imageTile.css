@@ -14,7 +14,8 @@
   margin: 5px; /* Add some spacing between elements */
 }
 
-.image-tile .row video {
+.image-tile .row video,
+img {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 30px;

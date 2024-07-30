@@ -7,5 +7,10 @@ video::-webkit-media-controls-fullscreen-button {
 }
 
 .myVideo {
+  object-fit: cover;
   pointer-events: none;
+}
+
+.imgFullW {
+  width: 100%;
 }

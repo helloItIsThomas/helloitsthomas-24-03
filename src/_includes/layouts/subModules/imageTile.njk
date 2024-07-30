@@ -7,7 +7,8 @@
           .endsWith('.mov')or image
           .src
           .endsWith('.mp4') %}
-          <video autoplay playsinline loop class="myVideo" src="{{ image.src }}" alt="{{ image.alt }}" controls></video>
+          {# <video autoplay playsinline class="imgFullW" src="{{ image.src }}" alt="{{ image.alt }}" controls></video> #}
+          <video playsinline class="imgFullW" src="{{ image.src }}" alt="{{ image.alt }}" controls></video>
         {% else %}
           <img src="{{ image.src }}" alt="{{ image.alt }}">
         {% endif %}
