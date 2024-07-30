@@ -10,15 +10,19 @@
     </div>
   </div>
   <div class="projectBackCContent">
-    {% for component in components %}
-      {% if component.type == 'imageTile' %}
-        {% include "layouts/subModules/imageTile.njk" %}
-      {% elif component.type == 'appImage' %}
-        {% include "layouts/subModules/appImage.njk" %}
-      {% elif component.type == 'fullWidthImage' %}
-        {% include "layouts/subModules/fullWidthImage.njk" %}
-      {% elif component.type == 'text' %}
-        {% include "layouts/subModules/text.njk" %}
-      {% endif %}
+    {% for module in modules %}
+      <div class="projectModule">
+        {% for component in module.components %}
+          {% if component.type == 'imageTile' %}
+            {% include "layouts/subModules/imageTile.njk" %}
+          {% elif component.type == 'appImage' %}
+            {# {% include "layouts/subModules/appImage.njk" %} #}
+          {% elif component.type == 'fullWidthImage' %}
+            {# {% include "layouts/subModules/fullWidthImage.njk" %} #}
+          {% elif component.type == 'text' %}
+            {# {% include "layouts/subModules/text.njk" %} #}
+          {% endif %}
+        {% endfor %}
+      </div>
     {% endfor %}
   </div>

@@ -1,6 +1,7 @@
 .text-module {
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 .text-grid {
@@ -10,5 +11,6 @@
 }
 
 .text-grid p {
+  font-size: small;
   margin: 0;
 }

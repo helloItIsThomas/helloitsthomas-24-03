@@ -11,7 +11,7 @@ const loadContent = (url) => {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded with JavaScript");
 
-  loadContent("/projects/budMusic");
+  loadContent("/projects/snickers");
 
   // Event listener for project links
   document.querySelectorAll(".project-link").forEach((link) => {

@@ -10,3 +10,18 @@
   flex: 1 1 calc(33.33% - 5px);
   max-width: calc(33.33% - 5px);
 }
+
+.image-tile .row video {
+  box-sizing: border-box;
+  flex: 1 1 calc(33.33% - 5px);
+  max-width: calc(33.33% - 5px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: blue;
+}
