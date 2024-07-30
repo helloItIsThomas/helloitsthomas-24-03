@@ -1,20 +1,25 @@
-.image-tile .row {
+.image-title {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 5px;
 }
 
-.image-tile .row img {
-  box-sizing: border-box;
-  flex: 1 1 calc(33.33% - 5px);
-  max-width: calc(33.33% - 5px);
+.image-tile .row {
+  display: flex;
+  flex: 1 1 0;
+}
+
+.image-tile .row > * {
+  flex: 1 1 auto; /* Adjust the size of the elements to fit the row */
+  max-width: 100%; /* Ensure the elements do not exceed the container's width */
+  margin: 5px; /* Add some spacing between elements */
 }
 
 .image-tile .row video {
   box-sizing: border-box;
-  flex: 1 1 calc(33.33% - 5px);
-  max-width: calc(33.33% - 5px);
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
 }
 
 h1,

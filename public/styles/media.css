@@ -1,0 +1,11 @@
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+.myVideo {
+  pointer-events: none;
+}

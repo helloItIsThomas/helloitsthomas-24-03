@@ -9,18 +9,18 @@ modules:
         data:
           rows:
             - images:
-                - src: "assets/diaImg.png"
+                - src: "assets/projects/snickers/logoD4.mp4"
                   alt: "Image 1"
-                - src: "assets/projects/snickers/theFave.mov"
+                - src: "assets/projects/snickers/logoD6.mp4"
                   alt: "Image 2"
-                - src: "assets/diaImg.png"
+                - src: "assets/projects/snickers/logoD1.mp4"
+                  alt: "Image 1"
+                - src: "assets/projects/snickers/logoD3.mp4"
                   alt: "Image 2"
             - images:
-                - src: "assets/diaImg.png"
+                - src: "assets/projects/snickers/theFave.mp4"
                   alt: "Image 1"
-                - src: "assets/diaImg.png"
-                  alt: "Image 2"
-                - src: "assets/diaImg.png"
+                - src: "assets/projects/snickers/logoD5.mp4"
                   alt: "Image 2"
       - type: text
         data:
