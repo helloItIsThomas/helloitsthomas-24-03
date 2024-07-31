@@ -81,7 +81,7 @@ function resetClip() {
     bottom: parentHeightDouble,
     left: 0,
     radius: 0,
-    duration: 0.0666,
+    duration: 0.1,
     onUpdate: () => {
       const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
       const elementToClip = document.querySelector("#thumbnail");
@@ -125,7 +125,7 @@ function resizeClip() {
     bottom: row1HeightDouble + row2HeightDouble,
     left: 0,
     radius: 30,
-    duration: 0.0666,
+    duration: 0.1,
     onUpdate: () => {
       const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
       const elementToClip = document.querySelector("#thumbnail");

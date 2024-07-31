@@ -15,7 +15,7 @@
 }
 
 .image-tile .row video,
-img {
+.image-tile .row img {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 30px;
