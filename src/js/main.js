@@ -61,17 +61,7 @@ window.addEventListener("wheel", (event) => {
   }
 });
 
-// lets do a lookup table.
-// the key is the imageIndex,
-// and the value is a list of values, one for each knob.
-
-const knobValues = {
-  0: [0, 10, 20, 30],
-  1: [50, 60, 70, 80],
-  2: [100, 110, 120, 130],
-};
-
 function updateThumbnail() {
   thumbnailImg.src = images[imageIndex];
-  updateKnobs(knobValues[imageIndex]);
+  updateKnobs(knobValues[imageIndex], imageIndex);
 }

@@ -10,34 +10,34 @@ const knobs = Array.from(knobContainers).map((container) => {
     knobElement.style.transform = `rotate(${angle}deg)`;
   });
 
-  knobElement.addEventListener("mousedown", function (event) {
-    event.preventDefault();
-    function onMouseMove(event) {
-      const rect = knobElement.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-      const deltaX = event.clientX - centerX;
-      const deltaY = event.clientY - centerY;
-      const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 90;
-      knobInstance.angle(angle);
-    }
-
-    function onMouseUp() {
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mouseup", onMouseUp);
-    }
-
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
-  });
+  //   knobElement.addEventListener("mousedown", function (event) {
+  // event.preventDefault();
+  // function onMouseMove(event) {
+  //   const rect = knobElement.getBoundingClientRect();
+  //   const centerX = rect.left + rect.width / 2;
+  //   const centerY = rect.top + rect.height / 2;
+  //   const deltaX = event.clientX - centerX;
+  //   const deltaY = event.clientY - centerY;
+  //   const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 90;
+  //   knobInstance.angle(angle);
+  // }
+  //
+  // function onMouseUp() {
+  //   document.removeEventListener("mousemove", onMouseMove);
+  //   document.removeEventListener("mouseup", onMouseUp);
+  // }
+  //
+  // document.addEventListener("mousemove", onMouseMove);
+  // document.addEventListener("mouseup", onMouseUp);
+  //   });
 
   // Scroll to turn functionality
-  knobElement.addEventListener("wheel", function (event) {
-    event.preventDefault();
-    let angle = knobInstance.angle();
-    angle += event.deltaY > 0 ? 1 : -1;
-    knobInstance.angle(angle);
-  });
+  //   knobElement.addEventListener("wheel", function (event) {
+  // event.preventDefault();
+  // let angle = knobInstance.angle();
+  // angle += event.deltaY > 0 ? 1 : -1;
+  // knobInstance.angle(angle);
+  //   });
 
   return {
     el: knobElement,
@@ -64,12 +64,19 @@ const knobs = Array.from(knobContainers).map((container) => {
 //   clearInterval(incrementInterval);
 // });
 
+// function updateKnobLights() {
+// knobLights.forEach((light, i) => {
+// light.style.opacity =
+// i < Math.floor(knobValue * knobLights.length) ? 1 : 0.1;
+// });
+// }
+
 function updateKnobs(vals, index) {
   trackNavThumb(index);
   gsap.to(
     knobs.map((k) => k.knob),
     {
-      angle: (i) => vals[i],
+      angle: (i) => vals[i] * 360,
       duration: 0.666,
       stagger: {
         each: -0.05,
@@ -78,6 +85,25 @@ function updateKnobs(vals, index) {
       ease: "elastic.inOut",
     }
   );
+  updateLights(vals);
+}
+
+function updateLights(vals) {
+  knobContainers.forEach((knobContainer, i) => {
+    const lights = knobContainer.querySelectorAll(".knobLight");
+    const numLights = lights.length;
+
+    lights.forEach((light) => {
+      light.style.opacity = 0.1;
+    });
+
+    // Calculate the index of the closest light
+    const closestLightIndex = Math.round(vals[i] * (numLights - 1));
+    if (closestLightIndex >= 0 && closestLightIndex < numLights) {
+      lights[closestLightIndex].style.opacity = 1.0;
+      lights[closestLightIndex].style.backgroundColor = "rgb(255, 0, 0)";
+    }
+  });
 }
 
 function trackNavThumb(i) {
