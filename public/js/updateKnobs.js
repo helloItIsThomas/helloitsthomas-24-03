@@ -47,24 +47,25 @@ const knobs = Array.from(knobContainers).map((container) => {
 });
 
 // DEBUG ANIMATE KNOB TURNING (uncomment if needed)
-let incrementInterval;
-window.addEventListener("mousedown", function (event) {
-  if (!knobs.some((knobObj) => knobObj.el === event.target)) {
-    function incrementKnobValue() {
-      knobs.forEach((knobObj) => {
-        let angle = knobObj.knob.angle();
-        angle = (angle + 1) % 360;
-        knobObj.knob.angle(angle);
-      });
-    }
-    incrementInterval = setInterval(incrementKnobValue, 100);
-  }
-});
-window.addEventListener("mouseup", function () {
-  clearInterval(incrementInterval);
-});
+// let incrementInterval;
+// window.addEventListener("mousedown", function (event) {
+//   if (!knobs.some((knobObj) => knobObj.el === event.target)) {
+// function incrementKnobValue() {
+//   knobs.forEach((knobObj) => {
+// let angle = knobObj.knob.angle();
+// angle = (angle + 1) % 360;
+// knobObj.knob.angle(angle);
+//   });
+// }
+// incrementInterval = setInterval(incrementKnobValue, 100);
+//   }
+// });
+// window.addEventListener("mouseup", function () {
+//   clearInterval(incrementInterval);
+// });
 
-function updateKnobs(vals) {
+function updateKnobs(vals, index) {
+  trackNavThumb(index);
   gsap.to(
     knobs.map((k) => k.knob),
     {
@@ -78,3 +79,19 @@ function updateKnobs(vals) {
     }
   );
 }
+
+function trackNavThumb(i) {
+  gsap.to(document.getElementById("myNavSlider"), {
+    value: imageIndex,
+    duration: 0.01,
+    ease: "power1.inOut",
+  });
+}
+
+const slider = document.getElementById("myNavSlider");
+slider.addEventListener("input", function (event) {
+  const value = event.target.value;
+  imageIndex = value;
+  updateThumbnail();
+  console.log("value: " + value);
+});

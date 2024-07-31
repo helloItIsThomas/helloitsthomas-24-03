@@ -57,9 +57,7 @@ window.addEventListener("wheel", (event) => {
     imageIndex = roundedIndex;
     updateThumbnail();
     clearTimeout(window.scrollTimeout);
-    window.scrollTimeout = setTimeout(() => {
-      // console.log("Updated Image to index: ", imageIndex);
-    }, 150);
+    window.scrollTimeout = setTimeout(() => {}, 150);
   }
 });
 
@@ -68,7 +66,7 @@ window.addEventListener("wheel", (event) => {
 // and the value is a list of values, one for each knob.
 
 const knobValues = {
-  0: [1, 10, 20, 30],
+  0: [0, 10, 20, 30],
   1: [50, 60, 70, 80],
   2: [100, 110, 120, 130],
 };
