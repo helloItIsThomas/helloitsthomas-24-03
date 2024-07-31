@@ -1,7 +1,8 @@
 ---
 title: "YouTube Cherry"
-layout: "layouts/projectBackC.njk"
 description: "one 1"
+layout: "layouts/projectBackC.njk"
+thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
   - title: "poppy"
     components:

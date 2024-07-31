@@ -80,7 +80,7 @@ function resetClip() {
     right: parentWidthDouble,
     bottom: parentHeightDouble,
     left: 0,
-    radius: 0,
+    radius: 30,
     duration: 0.1,
     onUpdate: () => {
       const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
@@ -113,7 +113,7 @@ function resizeClip() {
     right: parentWidthDouble,
     bottom: parentHeightDouble,
     left: 0,
-    radius: 0,
+    radius: 30,
   };
 
   const row1HeightDouble = parseFloat(row1Height);

@@ -2,6 +2,7 @@
 title: "bud music suite"
 description: " "
 layout: "layouts/projectBackC.njk"
+thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
   - name: "productRepeat"
     components:

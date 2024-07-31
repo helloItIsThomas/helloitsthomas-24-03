@@ -1,7 +1,8 @@
 ---
 title: "snickers gaming"
-layout: "layouts/projectBackC.njk"
 description: "one 1"
+layout: "layouts/projectBackC.njk"
+thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
   - name: "0"
     components:

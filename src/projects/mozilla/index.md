@@ -1,7 +1,8 @@
 ---
 title: "mozilla suite"
-layout: "layouts/projectBackC.njk"
 description: "TWO description for project TWO"
+layout: "layouts/projectBackC.njk"
+thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
   - name: "poppy"
     components:
