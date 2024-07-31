@@ -3,10 +3,9 @@
   flex-direction: column;
   width: 50px;
   height: 100vh;
-  border-radius: 5vw;
   /* border-right: 1px solid black; */
   color: black;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   /* border-right: 1px solid black; */
 }
 

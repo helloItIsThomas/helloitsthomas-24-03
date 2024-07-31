@@ -62,6 +62,25 @@ window.addEventListener("wheel", (event) => {
 });
 
 function updateThumbnail() {
-  thumbnailImg.src = images[imageIndex];
+  animateThumbnailTransition();
   updateKnobs(knobValues[imageIndex], imageIndex);
+}
+
+function animateThumbnailTransition() {
+  const cont = document.getElementById("frontC");
+  gsap.to(cont, {
+    "--after-height": "51%",
+    "--before-height": "50%",
+    duration: 0.333,
+    ease: "power2.out",
+    onComplete: () => {
+      thumbnailImg.src = images[imageIndex];
+      gsap.to(cont, {
+        "--after-height": "0%",
+        "--before-height": "0%",
+        duration: 0.111,
+        ease: "power2.inOut",
+      });
+    },
+  });
 }
