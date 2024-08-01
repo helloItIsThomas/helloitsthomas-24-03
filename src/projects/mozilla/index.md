@@ -4,7 +4,7 @@ description: "TWO description for project TWO"
 layout: "layouts/projectBackC.njk"
 thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
-  - name: "poppy"
+  - name: "mod1"
     components:
       - type: imageTile
         data:
@@ -39,7 +39,3 @@ modules:
           - src: "assets/dhs.png"
             alt: "side image 2"
 ---
-
----
-
-### project 2 2 2 content

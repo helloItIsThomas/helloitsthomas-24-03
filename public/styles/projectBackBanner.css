@@ -3,7 +3,6 @@
   /* height: auto; */
   /* height: 100%; */
   height: 100vh;
-  /* background-color: tomato; */
 }
 
 .pH {
@@ -20,7 +19,6 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  /* background-color: blue; */
   border-radius: 50px;
 }
 

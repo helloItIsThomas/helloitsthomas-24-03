@@ -1,54 +1,59 @@
 ---
 title: "YouTube Cherry"
-description: "one 1"
+description: "I developed a set of scripts to automate the production of a large collection of graphics for YouTube's Cherry Campus. The title of each set refers to a species of plant that is native to the area."
 layout: "layouts/projectBackC.njk"
 thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
   - title: "poppy"
     components:
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/poppy/finalcomps/1-2.jpg"
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/poppy/finalcomps/9.jpg"
+      - type: imageTile
+        data:
+          rows:
+            - images:
+                - src: "assets/projects/youtubecherry/poppy/FinalComps/8.jpg"
+                  alt: "Image 1"
+                - src: "assets/projects/youtubecherry/poppy/FinalComps/5.jpg"
+                  alt: "Image 2"
+      - type: imageTile
+        data:
+          rows:
+            - images:
+                - src: "assets/projects/youtubecherry/poppy/finalcomps/9.jpg"
+                  alt: "Image 1"
+                - src: "assets/projects/youtubecherry/poppy/Detail/2.jpg"
+                  alt: "Image 2"
+                - src: "assets/projects/youtubecherry/poppy/Detail/0.jpg"
+                  alt: "Image 2"
       - type: text
         data:
-          headline: "Poppy"
+          headline: "Poppy Set"
           cols:
-            - src: "Here is some content for p 1"
-            - src: "Here is some content for p 2"
+            - src: "This script translates batches of poppy flower .png's into treated .svg files. These .svg's were then brought into PhotoShop, where I used them to compose each mural."
   - title: "liveOak"
     components:
       - type: fullWidthImage
-        src: "assets/projects/youtubecherry/1.jpg"
+        src: "assets/projects/youtubecherry/liveOak/FinalComps/12-13-14.jpg"
+      - type: imageTile
+        data:
+          rows:
+            - images:
+                - src: "assets/projects/youtubecherry/liveOak/FinalComps/21.jpg"
+                  alt: "Image 1"
+                - src: "assets/projects/youtubecherry/liveOak/FinalComps/5.jpg"
+                  alt: "Image 2"
+                - src: "assets/projects/youtubecherry/liveOak/FinalComps/11.jpg"
+                  alt: "Image 2"
+      - type: imageTile
+        data:
+          rows:
+            - images:
+                - src: "assets/projects/youtubecherry/liveOak/Detail/1.jpg"
+                  alt: "Image 1"
+                - src: "assets/projects/youtubecherry/liveOak/Detail/3.jpg"
+                  alt: "Image 2"
       - type: text
         data:
-          headline: "Live Oak"
+          headline: "Live Oak Set"
           cols:
-            - src: "Here is some content for p 1"
-  - title: "wallFlower"
-    components:
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/wallflower/finalcomps/11-12-13-14.jpg"
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/wallflower/finalcomps/9-10.jpg"
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/wallflower/finalcomps/2.jpg"
-      - type: text
-        data:
-          headline: "Wallflower"
-          cols:
-            - src: "Here is some content for p 1"
-  - title: "morningGlory"
-    components:
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/morningglory/finalcomps/1-2.jpg"
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/morningglory/finalcomps/3-4.jpg"
-      - type: fullWidthImage
-        src: "assets/projects/youtubecherry/morningglory/finalcomps/5.jpg"
-      - type: text
-        data:
-          headline: "Morning Glory"
-          cols:
-            - src: "Here is some content for p 1"
+            - src: "This script translates batches of images of oak trees into treated .svg files. These files were then scaled up, converted to pdf, and sent to the printer."
 ---
