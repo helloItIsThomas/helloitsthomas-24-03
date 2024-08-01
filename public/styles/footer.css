@@ -1,5 +1,30 @@
-.footer {
-  background-color: #f3f3f3;
-  padding: 30px;
-  height: auto;
+#footer {
+  position: relative;
+  /* background-color: orange; */
+  color: blue;
+  font-size: large;
+  font-style: italic;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerButton {
+  width: 25%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  background-color: white;
+}
+
+#footerButton:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
 }

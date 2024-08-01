@@ -40,11 +40,15 @@
 .projectBackCBanner .row2 {
   height: 100%;
   display: grid;
-  /* box-sizing: border-box; */
-  /* border: 2px solid black; */
 }
 .projectBackCBanner .row3 {
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.descriptionCopy {
+  width: 66%;
+  font-size: 0.9em;
+  padding: 30px;
 }

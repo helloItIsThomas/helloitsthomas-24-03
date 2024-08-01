@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+#thumbnail:hover {
+  cursor: pointer;
+}
+
 #frontC {
   position: absolute;
   z-index: 10;

@@ -21,6 +21,7 @@ let projectContent;
 
 window.addEventListener("load", () => {
   projectContent = document.querySelector("#projectContent");
+  thumbnailImg.src = images[imageIndex];
   topFunction();
 });
 
@@ -59,6 +60,7 @@ window.addEventListener("wheel", (event) => {
     clearTimeout(window.scrollTimeout);
     window.scrollTimeout = setTimeout(() => {}, 150);
   }
+  console.log(imageIndex);
 });
 
 function updateThumbnail() {

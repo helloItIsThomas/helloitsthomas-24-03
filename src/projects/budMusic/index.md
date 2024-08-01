@@ -1,6 +1,6 @@
 ---
 title: "bud music suite"
-description: " "
+description: "I designed and developed a suite of macOS applications to rapidly iterate, democratize motion design, and accelerate production processes"
 layout: "layouts/projectBackC.njk"
 thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
