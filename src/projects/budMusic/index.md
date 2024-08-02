@@ -23,7 +23,7 @@ modules:
         data:
           headline: "Pattern Generator"
           cols:
-            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale "
+            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale."
   - name: "typeOnLines"
     components:
       - type: appImage
@@ -37,8 +37,8 @@ modules:
         data:
           headline: "Reverb Designer"
           cols:
-            - src: "Reverb was a central theme of this identity."
-            - src: "This app visualizes reverb as typography, pulling in the names of artists working with Bud Music."
+            - src: "Reverb was a central theme of this identity. This app visualizes reverb as typography, pulling in the names of artists working with Bud Music."
+            - src: "After Effects is a powerful tool, but can be far too complicated for simple use cases. Custom motion software like this democratizes motion design, empowering everyone to generate motion assets that are always on brand."
   - name: "waveOtron"
     components:
       - type: appImage
@@ -53,6 +53,7 @@ modules:
           headline: "Wave-O-Tron"
           cols:
             - src: "The Wave-O-Tron was developed to explore ways to visualize the concept of Reverb through typography and image."
+            - src: "This software allows anyone to design on-brand motion assets without any prior motion design experience."
       - type: fullWidthImage
         src: "assets/projects/budMusic/wave-o-tron-eilish.mp4"
   - name: "dropShadow"

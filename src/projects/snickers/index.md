@@ -10,10 +10,10 @@ modules:
         src: "assets/projects/snickers/snickersDynamicRows-3-comped.mp4"
       - type: text
         data:
-          headline: "Project 1 Headline"
+          headline: "Pattern Generator"
           cols:
-            - src: "Here is some content for p 1"
-            - src: "Here is some content for p 2"
+            - src: "This tool allows the user to create background graphics from the Snickers logo."
+            - src: "Offset, row count, position, and scale can be easily adjusted to iterate through an endless number of outcomes."
   - name: "1"
     components:
       - type: imageTile
@@ -35,10 +35,9 @@ modules:
                   alt: "Image 2"
       - type: text
         data:
-          headline: "Project 1 Headline"
+          headline: "Bespoke Graphic Filters"
           cols:
-            - src: "Here is some content for p 1"
-            - src: "Here is some content for p 2"
+            - src: "This collection of shaders explores various ways to add brand recognition and motion to the Snickers logo."
   - name: "2"
     components:
       - type: imageTile
@@ -51,10 +50,9 @@ modules:
                   alt: "Image 1"
       - type: text
         data:
-          headline: "Project 1 Headline"
+          headline: "Secondary Graphic Filters"
           cols:
-            - src: "Here is some content for p 1"
-            - src: "Here is some content for p 2"
+            - src: "A second exploration focused on secondary imagery"
   - name: "3"
     components:
       - type: imageTile
@@ -76,10 +74,9 @@ modules:
                   alt: "Image 1"
       - type: text
         data:
-          headline: "Project 1 Headline"
+          headline: "Static Graphic Filter"
           cols:
-            - src: "Here is some content for p 1"
-            - src: "Here is some content for p 2"
+            - src: "A graphic filter designed to treat images statically, informed by the shape of the Snickers logo."
 ---
 
 ---

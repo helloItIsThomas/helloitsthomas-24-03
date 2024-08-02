@@ -1,6 +1,6 @@
 ---
 title: "mozilla suite"
-description: "TWO description for project TWO"
+description: ""
 layout: "layouts/projectBackC.njk"
 thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
