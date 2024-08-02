@@ -17,17 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   projectContent = document.querySelector("#projectContent");
-  thumbnailImg.src = images[imageIndex];
+  thumbnailImg.src = globalProjectInfo[imageIndex].thumbnail;
+  // commenting this top function out
+  // will prevent an occasionaly error
+  // on page load.
   // topFunction();
 });
 
 let projectContent;
-
-// window.addEventListener("load", () => {
-// projectContent = document.querySelector("#projectContent");
-// thumbnailImg.src = images[imageIndex];
-// topFunction();
-// });
 
 window.addEventListener("resize", () => {
   if (globalState.isHome) {
@@ -61,9 +58,10 @@ window.addEventListener("wheel", (event) => {
 });
 
 function updateThumbnail() {
-  imageIndex = (imageIndex + 1) % images.length;
-  thumbnailImg.src = images[imageIndex];
-  updateKnobs(knobValues[imageIndex], imageIndex);
+  imageIndex = (imageIndex + 1) % globalProjectInfo.length;
+  // thumbnailImg.src = images[imageIndex];
+  thumbnailImg.src = globalProjectInfo[imageIndex].thumbnail;
+  updateKnobs(globalProjectInfo[imageIndex].knobValues, imageIndex);
 }
 
 function onDeltaZero() {

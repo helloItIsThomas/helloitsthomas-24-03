@@ -25,7 +25,8 @@ function toHome() {
   }
 }
 function toProject() {
-  const contentURL = links[imageIndex];
+  const contentURL = globalProjectInfo[imageIndex].link;
+  // const contentURL = links[imageIndex];
   loadContent(contentURL);
   console.log("TO PROJECT RUN");
   tbc.style.overflowY = "scroll";
