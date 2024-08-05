@@ -29,10 +29,14 @@ modules:
       - type: appImage
         mainSrc: "assets/projects/budMusic/typeLinesApp.mp4"
         sideImages:
-          - src: "assets/dhs.png"
-            alt: "side img 1"
-          - src: "assets/dhs.png"
+          - src: "assets/projects/budMusic/budTypeVerb-0.mp4"
+            alt: "side img 0"
+          - src: "assets/projects/budMusic/budTypeVerb-1.mp4"
+            alt: "side image 1"
+          - src: "assets/projects/budMusic/budTypeVerb-2.mp4"
             alt: "side image 2"
+          - src: "assets/projects/budMusic/budTypeVerb-3.mp4"
+            alt: "side image 3"
       - type: text
         data:
           headline: "Reverb Designer"
@@ -44,9 +48,11 @@ modules:
       - type: appImage
         mainSrc: "assets/projects/budMusic/wave-o-tron-app.mp4"
         sideImages:
-          - src: "assets/dhs.png"
+          - src: "assets/projects/budMusic/wave-0.png"
             alt: "side img 1"
-          - src: "assets/dhs.png"
+          - src: "assets/projects/budMusic/wave-1.png"
+            alt: "side image 2"
+          - src: "assets/projects/budMusic/wave-2.png"
             alt: "side image 2"
       - type: text
         data:
@@ -61,10 +67,8 @@ modules:
       - type: appImage
         mainSrc: "assets/projects/budMusic/budDropPattern.mp4"
         sideImages:
-          - src: "assets/dhs.png"
+          - src: "assets/projects/budMusic/dropShadow.png"
             alt: "side img 1"
-          - src: "assets/dhs.png"
-            alt: "side image 2"
       - type: text
         data:
           headline: "Treatment Helper"

@@ -1,41 +1,63 @@
 ---
-title: "mozilla suite"
-description: ""
+title: "Mozilla"
+description: " "
 layout: "layouts/projectBackC.njk"
-thumbnailImg: "assets/projects/budMusic/product-3.png"
+thumbnailImg: "assets/projects/mozilla/banner.png"
 modules:
-  - name: "mod1"
+  - name: "Gradient Filter"
     components:
-      - type: imageTile
-        data:
-          rows:
-            - images:
-                - src: "assets/diaImg.png"
-                  alt: "Image 1"
-                - src: "assets/diaImg.png"
-                  alt: "Image 2"
-                - src: "assets/diaImg.png"
-                  alt: "Image 2"
-            - images:
-                - src: "assets/diaImg.png"
-                  alt: "Image 1"
-                - src: "assets/diaImg.png"
-                  alt: "Image 2"
-                - src: "assets/diaImg.png"
-                  alt: "Image 2"
-      - type: fullWidthImage
-        src: "assets/dhs.png"
+      - type: appImage
+        mainSrc: "assets/projects/mozilla/gradApp.mp4"
+        sideImages:
+          - src: "assets/projects/mozilla/gradOut-0.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/gradOut-1.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/gradOut-3.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/gradOut-4.png"
+            alt: "Image 1"
       - type: text
         data:
-          headline: "Project 1 Headline"
+          headline: "Pattern Generator"
           cols:
-            - src: "Here is some content for p 1"
-            - src: "Here is some content for p 2"
+            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale."
+  - name: "Repeat Filter"
+    components:
       - type: appImage
-        mainSrc: "assets/dhs.png"
+        mainSrc: "assets/projects/mozilla/stackApp.mov"
         sideImages:
-          - src: "assets/dhs.png"
-            alt: "side img 1"
-          - src: "assets/dhs.png"
-            alt: "side image 2"
+          - src: "assets/projects/mozilla/stack0.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/stack1.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/stack2.png"
+            alt: "Image 1"
+      - type: text
+        data:
+          headline: "Pattern Generator"
+          cols:
+            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale."
+  - name: "Chunky Pixel Filter"
+    components:
+      - type: appImage
+        mainSrc: "assets/projects/mozilla/chunkyApp.mp4"
+        sideImages:
+          - src: "assets/projects/mozilla/chunky-0.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/chunky-1.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/chunky-2.png"
+            alt: "Image 1"
+          - src: "assets/projects/mozilla/chunky-3.png"
+            alt: "Image 1"
+      - type: text
+        data:
+          headline: "Pattern Generator"
+          cols:
+            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale."
 ---
+
+---
+
+### project 1 content

@@ -59,7 +59,7 @@
   width: 20%;
   height: 20%;
   background: #000;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
   border-radius: 50%;
   transform: translate(-50%, -50%);

@@ -6,8 +6,15 @@ thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
   - name: "0"
     components:
-      - type: fullWidthImage
-        src: "assets/projects/snickers/snickersDynamicRows-3-comped.mp4"
+      - type: appImage
+        mainSrc: "assets/projects/snickers/snickersDynamicRows-3-comped.mp4"
+        sideImages:
+          - src: "assets/projects/snickers/logoCrop0.png"
+            alt: "side img 1"
+          - src: "assets/projects/snickers/logoCrop1.png"
+            alt: "side image 2"
+          - src: "assets/projects/snickers/logoCrop2.png"
+            alt: "side image 2"
       - type: text
         data:
           headline: "Pattern Generator"

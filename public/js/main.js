@@ -1,3 +1,16 @@
+function doImageVideoChange() {
+  if (globalProjectInfo[imageIndex].thumbnail.includes("mov")) {
+    // thumbnailImg.src = "";
+    thumbnailImg.style.display = "none";
+    thumbnailVid.style.display = "block";
+    thumbnailVid.src = globalProjectInfo[imageIndex].thumbnail;
+  } else {
+    thumbnailVid.style.display = "none";
+    thumbnailImg.style.display = "block";
+    thumbnailImg.src = globalProjectInfo[imageIndex].thumbnail;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   class Knob {
     constructor(knobElement, callback) {
@@ -17,8 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   projectContent = document.querySelector("#projectContent");
-  thumbnailImg.src = globalProjectInfo[imageIndex].thumbnail;
-  // commenting this top function out
+  doImageVideoChange();
+
+  // commenting this topFunction out
   // will prevent an occasionaly error
   // on page load.
   // topFunction();
@@ -35,6 +49,7 @@ window.addEventListener("resize", () => {
 let scrollPos = 0;
 let lastRoundedIndex = -1; // Keep track of the last rounded index
 const thumbnailImg = document.querySelector("#thumbnail img");
+const thumbnailVid = document.querySelector("#thumbnail video");
 
 let isScrolling = false; // Flag to track the scrolling state
 const sensitivity = 0.05;
@@ -59,8 +74,8 @@ window.addEventListener("wheel", (event) => {
 
 function updateThumbnail() {
   imageIndex = (imageIndex + 1) % globalProjectInfo.length;
-  // thumbnailImg.src = images[imageIndex];
-  thumbnailImg.src = globalProjectInfo[imageIndex].thumbnail;
+  doImageVideoChange();
+
   updateKnobs(globalProjectInfo[imageIndex].knobValues, imageIndex);
 }
 

@@ -25,11 +25,11 @@ const globalProjectInfo = [
     "Youtube",
     "/assets/projects/youtubeCherry/liveOak/FinalComps/5.jpg",
     "/projects/youtube",
-    [0.3, 0.1, 0.9, 0.3]
+    [0.3, 0.8, 0.9, 0.3]
   ),
   new ProjectInfo(
     "Snickers",
-    "/assets/projects/snickers/banner.png",
+    "/assets/projects/snickers/banner.mov",
     "/projects/snickers",
     [0.5, 0.1, 0.3, 0.9]
   ),
@@ -37,7 +37,7 @@ const globalProjectInfo = [
     "Mozilla",
     "/assets/projects/mozilla/banner.png",
     "/projects/mozilla",
-    [0.1, 0.3, 0.4, 0.8]
+    [0.98, 0.58, 0.23, 0.2]
   ),
 ];
 
