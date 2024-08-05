@@ -13,6 +13,7 @@ function topFunction() {
     duration: d,
     ease: "power2.inOut",
     onComplete: () => {
+      console.log("reset clip about to run");
       resetClip();
     },
   });

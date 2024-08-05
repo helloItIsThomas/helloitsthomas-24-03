@@ -6,7 +6,6 @@ const knobs = Array.from(knobContainers).map((container) => {
     const angle = knobInstance.angle();
     let value = (angle % 360) / 360;
     if (value < 0) value += 1;
-    knobDisplay.innerText = value.toFixed(2);
     knobElement.style.transform = `rotate(${angle}deg)`;
   });
 

@@ -1,136 +1,83 @@
+function getDimensions() {
+  const banner = document.querySelector(".projectBackCBanner");
+  const { height: parentHeight, width: parentWidth } =
+    window.getComputedStyle(banner);
+  const { height: row1Height } = window.getComputedStyle(
+    banner.querySelector(".row1")
+  );
+  const { height: row2Height } = window.getComputedStyle(
+    banner.querySelector(".row2")
+  );
+
+  return {
+    parentHeight: parseFloat(parentHeight),
+    parentWidth: parseFloat(parentWidth),
+    row1Height: parseFloat(row1Height),
+    row2Height: parseFloat(row2Height),
+  };
+}
+
+function setClipPath(top, right, bottom, left, radius = 0) {
+  const clipPathValue = `rect(${top}px ${right}px ${bottom}px ${left}px round ${radius}px)`;
+  document.querySelector("#thumbnail").style.clipPath = clipPathValue;
+}
+
 function instantClipReset() {
-  const parentHeight = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).height;
-  const parentWidth = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).width;
-  const parentWidthDouble = parseFloat(parentWidth);
-  const parentHeightDouble = parseFloat(parentHeight);
-
-  const clipPathValue = `rect(${0}px ${parentWidthDouble}px ${parentHeightDouble}px ${0}px round ${0}px)`;
-  const elementToClip = document.querySelector("#thumbnail");
-
-  elementToClip.style.clipPath = clipPathValue;
+  const { parentWidth, parentHeight } = getDimensions();
+  setClipPath(0, parentWidth, parentHeight, 0);
 }
 
 function instantClipSet() {
-  const parentHeight = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).height;
-  const parentWidth = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).width;
-  const row1Height = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner .row1")
-  ).height;
-  const row2Height = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner .row2")
-  ).height;
-
-  const parentWidthDouble = parseFloat(parentWidth);
-  const parentHeightDouble = parseFloat(parentHeight);
-  const row1HeightDouble = parseFloat(row1Height);
-  const row2HeightDouble = parseFloat(row2Height);
-
-  const myRect = {
-    top: row1HeightDouble,
-    right: parentWidthDouble,
-    bottom: row2HeightDouble + row1HeightDouble,
-    left: 0,
-    radius: 30,
-  };
-
-  const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
-  const elementToClip = document.querySelector("#thumbnail");
-
-  elementToClip.style.clipPath = clipPathValue;
+  const { parentWidth, row1Height, row2Height } = getDimensions();
+  setClipPath(row1Height, parentWidth, row1Height + row2Height, 0, 30);
 }
 
 function resetClip() {
-  const parentHeight = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).height;
-  const parentWidth = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).width;
-  const row1Height = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner .row1")
-  ).height;
-  const row2Height = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner .row2")
-  ).height;
-
-  const parentWidthDouble = parseFloat(parentWidth);
-  const parentHeightDouble = parseFloat(parentHeight);
-
-  const row1HeightDouble = parseFloat(row1Height);
-  const row2HeightDouble = parseFloat(row2Height);
-
+  const { parentWidth, parentHeight, row1Height, row2Height } = getDimensions();
   const myRect = {
-    top: row1HeightDouble,
-    right: parentWidthDouble,
-    bottom: row1HeightDouble + row2HeightDouble,
+    top: row1Height,
+    right: parentWidth,
+    bottom: row1Height + row2Height,
     left: 0,
     radius: 30,
   };
 
   gsap.to(myRect, {
     top: 0,
-    right: parentWidthDouble,
-    bottom: parentHeightDouble,
-    left: 0,
-    radius: 30,
+    bottom: parentHeight,
     duration: 0.1,
-    onUpdate: () => {
-      const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
-      const elementToClip = document.querySelector("#thumbnail");
-
-      elementToClip.style.clipPath = clipPathValue;
-    },
+    onUpdate: () =>
+      setClipPath(
+        myRect.top,
+        myRect.right,
+        myRect.bottom,
+        myRect.left,
+        myRect.radius
+      ),
   });
 }
 
 function resizeClip() {
-  const parentHeight = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).height;
-  const parentWidth = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner")
-  ).width;
-  const row1Height = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner .row1")
-  ).height;
-  const row2Height = window.getComputedStyle(
-    document.querySelector(".projectBackCBanner .row2")
-  ).height;
-
-  const parentWidthDouble = parseFloat(parentWidth);
-  const parentHeightDouble = parseFloat(parentHeight);
-
+  const { parentWidth, parentHeight, row1Height, row2Height } = getDimensions();
   const myRect = {
     top: 0,
-    right: parentWidthDouble,
-    bottom: parentHeightDouble,
+    right: parentWidth,
+    bottom: parentHeight,
     left: 0,
     radius: 30,
   };
 
-  const row1HeightDouble = parseFloat(row1Height);
-  const row2HeightDouble = parseFloat(row2Height);
-
   gsap.to(myRect, {
-    top: row1HeightDouble,
-    right: parentWidthDouble,
-    bottom: row1HeightDouble + row2HeightDouble,
-    left: 0,
-    radius: 30,
+    top: row1Height,
+    bottom: row1Height + row2Height,
     duration: 0.1,
-    onUpdate: () => {
-      const clipPathValue = `rect(${myRect.top}px ${myRect.right}px ${myRect.bottom}px ${myRect.left}px round ${myRect.radius}px)`;
-      const elementToClip = document.querySelector("#thumbnail");
-
-      elementToClip.style.clipPath = clipPathValue;
-    },
+    onUpdate: () =>
+      setClipPath(
+        myRect.top,
+        myRect.right,
+        myRect.bottom,
+        myRect.left,
+        myRect.radius
+      ),
   });
 }
