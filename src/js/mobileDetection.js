@@ -5,7 +5,6 @@ if (
   navigator.userAgent.match(/Android/i) ||
   navigator.userAgent.match(/iPhone/i)
 ) {
-  console.log("MOBILE DECTECTED");
   document.querySelector("body").style.background =
     "linear-gradient(to bottom, #ffffff, #f3f3f3)";
   const mobile = document.querySelector("#mobile-view");

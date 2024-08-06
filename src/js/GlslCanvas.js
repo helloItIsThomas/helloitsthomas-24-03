@@ -1258,7 +1258,6 @@ var Texture = (function () {
             JSON.stringify(el) +
             "`) must be a CSS ";
           msg += "selector string, or a <canvas>, <image> or <video> object";
-          console.log("Texture '" + this.name + "': " + msg, options);
         }
 
         this.loading = Promise.resolve(this);
@@ -1655,8 +1654,6 @@ var GlslCanvas = (function () {
             }
           } else _this2.fragmentString += line + "\n";
         });
-
-        // console.log(this.fragmentString);
 
         this.animated = false;
         this.nDelta = (this.fragmentString.match(/u_delta/g) || []).length;

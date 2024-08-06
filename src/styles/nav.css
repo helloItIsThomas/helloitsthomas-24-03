@@ -70,13 +70,15 @@
   /* outline: none; */
   --thumbDiam: 15px;
   --thumbRad: 4px;
+  --thumbDisplay: block;
 }
 
 .vertical-slider::-webkit-slider-thumb {
   width: var(--thumbDiam);
   height: var(--thumbDiam);
-  background-color: black;
   border: var(--thumbRad) solid white;
+  background-color: black;
+  display: var(--thumbDisplay);
   border-radius: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
@@ -84,8 +86,8 @@
 .vertical-slider::-moz-range-thumb {
   width: var(--thumbDiam);
   height: var(--thumbDiam);
-  background-color: black;
   border: var(--thumbRad) solid white;
+  background-color: black;
   border-radius: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }

@@ -12,5 +12,4 @@ function trackNavThumb(i) {
 slider.addEventListener("input", function (event) {
   const value = event.target.value;
   updateThumbnail(value);
-  console.log("value: " + value);
 });

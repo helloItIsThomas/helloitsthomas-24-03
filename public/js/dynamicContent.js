@@ -14,15 +14,8 @@ const loadContent = (url) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("initiating h knob");
-
   projectContent = document.querySelector("#projectContent");
   doImageVideoChange();
-
-  // commenting this topFunction out
-  // will prevent an occasionaly error
-  // on page load.
-  // topFunction();
 
   loadContent("/projects/snickers");
   initKnobs();

@@ -16,7 +16,6 @@ function toHome() {
   if (!globalState.isHome) {
     topFunction();
     globalState.isHome = true;
-    console.log("toHome");
     tbc.style.overflowY = "hidden";
     const thumb = document.getElementById("frontC");
     thumb.style.display = "block";
@@ -28,8 +27,7 @@ function toProject() {
   const contentURL = globalProjectInfo[imageIndex].link;
   // const contentURL = links[imageIndex];
   loadContent(contentURL);
-  console.log("TO PROJECT RUN");
-  tbc.style.overflowY = "scroll";
+  // tbc.style.overflowY = "scroll";
   if (globalState.isHome) {
     globalState.isHome = false;
     // const thumb = document.getElementById("projectContent");
@@ -57,12 +55,19 @@ function shrinkSocials() {
   });
 }
 
+function unlockScroll() {
+  tbc.style.overflowY = "scroll";
+}
+
 function shrinkNavBar() {
   const bar = document.querySelector("#navBar");
   gsap.to(bar, {
     width: 20,
     duration: 0.4,
     ease: "power2.inOut",
+    onComplete: () => {
+      unlockScroll();
+    },
   });
 }
 
@@ -96,6 +101,7 @@ function shrinkSlider() {
   gsap.to(navBar, {
     "--thumbDiam": "0",
     "--thumbRad": "0",
+    "--thumbDisplay": "none",
     height: 0,
     duration: 0.4,
     stagger: 0.666,
@@ -105,11 +111,11 @@ function shrinkSlider() {
 
 function expandSlider() {
   const navBar = document.querySelectorAll(".vertical-slider")[0];
-  console.log(navBar);
 
   gsap.to(navBar, {
     "--thumbDiam": "15",
     "--thumbRad": "4",
+    "--thumbDisplay": "block",
     height: "70%",
     duration: 0.4,
     stagger: 0.666,
@@ -145,8 +151,4 @@ function expandKnobBar() {
     duration: 0.4,
     ease: "power2.inOut",
   });
-}
-
-function barToBack() {
-  console.log("barToBack");
 }

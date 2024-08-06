@@ -3,7 +3,6 @@ let hKnobs;
 
 function initHKnobs() {
   hKnobContainers = document.querySelectorAll(".knob-container-H");
-  console.log("knob-container-H: ", hKnobContainers);
   hKnobs = Array.from(hKnobContainers).map((container) => {
     const knobElement = container.querySelector(".knob");
     const knobDisplay = container.querySelector(".knob-display");
