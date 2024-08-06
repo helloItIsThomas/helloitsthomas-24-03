@@ -114,9 +114,9 @@ function trackNavThumb(i) {
 }
 
 const slider = document.getElementById("myNavSlider");
+slider.max = globalProjectInfo.length - 1;
 slider.addEventListener("input", function (event) {
   const value = event.target.value;
-  imageIndex = value;
-  updateThumbnail();
+  updateThumbnail(value);
   console.log("value: " + value);
 });

@@ -24,8 +24,6 @@ function setClipPath(top, right, bottom, left, radius = 0) {
   thumbnail.style.clipPath = clipPathValue;
   thumbnail.style.setProperty("--clip-path", clipPathValue);
 
-  console.log(bottom);
-
   gsap.to(thumbnail, {
     "--after-top": `${top}px`,
     "--after-bottom": `${bottom - top}px`,

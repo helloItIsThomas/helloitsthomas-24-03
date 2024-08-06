@@ -68,8 +68,8 @@
   cursor: pointer;
   background-color: #000;
   /* outline: none; */
-  /* --thumbDiam: 15px; */
-  /* --thumbRad: 4px; */
+  --thumbDiam: 15px;
+  --thumbRad: 4px;
 }
 
 .vertical-slider::-webkit-slider-thumb {

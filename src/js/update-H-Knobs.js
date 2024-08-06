@@ -18,7 +18,6 @@ function setLightsKnobsH(vals) {
   });
 
   console.log("running setLightsKnobsH");
-  console.log(knobContainersH);
   knobContainersH.forEach((knobContainerH, i) => {
     const lights = knobContainerH.querySelectorAll(".knobLightH");
     const numLights = lights.length;

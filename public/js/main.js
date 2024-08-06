@@ -1,4 +1,5 @@
 function doImageVideoChange() {
+  console.log(imageIndex);
   if (globalProjectInfo[imageIndex].thumbnail.includes("mov")) {
     // thumbnailImg.src = "";
     thumbnailImg.style.display = "none";
@@ -12,22 +13,24 @@ function doImageVideoChange() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  class Knob {
-    constructor(knobElement, callback) {
-      this.knobElement = knobElement;
-      this.callback = callback;
-      this._angle = 0; // Initial angle
-      // Initialize the knob
-    }
+  updateThumbnail(0);
 
-    angle(value) {
-      if (value !== undefined) {
-        this._angle = value;
-        this.callback(this);
-      }
-      return this._angle;
-    }
-  }
+  // class Knob {
+  // constructor(knobElement, callback) {
+  // this.knobElement = knobElement;
+  // this.callback = callback;
+  // this._angle = 0; // Initial angle
+  // Initialize the knob
+  // }
+  //
+  // angle(value) {
+  // if (value !== undefined) {
+  // this._angle = value;
+  // this.callback(this);
+  // }
+  // return this._angle;
+  // }
+  // }
 
   projectContent = document.querySelector("#projectContent");
   doImageVideoChange();
@@ -65,23 +68,33 @@ window.addEventListener("wheel", (event) => {
   if (delta != 0) {
     animateThumbnailTransition();
     clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      // Run the function when delta turns to 0
-      onDeltaZero();
-    }, 250); // Adjust timeout as needed
+    if (delta > 0) {
+      timeoutId = setTimeout(() => {
+        // Run the function when delta turns to 0
+        onDeltaZero((imageIndex + 1) % globalProjectInfo.length);
+      }, 250);
+    } else if (delta < 0) {
+      timeoutId = setTimeout(() => {
+        // Wrap to the end of the list if imageIndex becomes negative
+        const newIndex =
+          (imageIndex - 1 + globalProjectInfo.length) %
+          globalProjectInfo.length;
+        onDeltaZero(newIndex);
+      }, 250);
+    }
   }
 });
 
-function updateThumbnail() {
-  imageIndex = (imageIndex + 1) % globalProjectInfo.length;
+function updateThumbnail(newImgIndex) {
+  imageIndex = newImgIndex;
   doImageVideoChange();
 
   updateKnobs(globalProjectInfo[imageIndex].knobValues, imageIndex);
 }
 
-function onDeltaZero() {
+function onDeltaZero(newImgIndex) {
   const cont = document.getElementById("frontC");
-  updateThumbnail();
+  updateThumbnail(newImgIndex);
   gsap.to(cont, {
     "--after-height": "0%",
     "--before-height": "0%",

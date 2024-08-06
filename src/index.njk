@@ -2,6 +2,9 @@
 <script src="/js/gsap/gsap.min.js"></script>
 <html lang="en">
   <head>
+    {# putting the script tag here, because others rely on it #}
+    <script src="/js/globalVars.js"></script>
+
     <meta charset="UTF-8"/>
     <meta property=”og:url content=”https://github.com/timClicks/glsl-shader-intro”/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -50,13 +53,13 @@
   </body>
 </html>
 
-<script src="/js/globalVars.js"></script>
+<script src="/js/main.js"></script>
 <script src="/js/dynamicContent.js"></script>
 <script src="/js/Knob.js"></script>
-<script src="/js/main.js"></script>
 <script src="/js/utils.js"></script>
 <script src="/js/editClip.js"></script>
 <script src="/js/handleInteraction.js"></script>
 <script src="/js/updateKnobs.js"></script>
-<script src="/js/appImage.js"></script>
+<script src="/js/mobileDetection.js"></script>
+{# <script src="/js/appImage.js"></script> #}
 {# <script src="/js/viewPort.js"></script> #}

@@ -7,13 +7,10 @@ function appImageListener() {
     rightAppImage.addEventListener("click", function (event) {
       rightAppImage.childNodes.forEach((jfkdls) => {
         if (jfkdls.nodeName === "IMG") {
-          jfkdls.addEventListener("click", function (event) {
-            console.log("Image clicked" + jfkdls.src);
-          });
+          jfkdls.addEventListener("click", function (event) {});
         }
       });
       const imageCopy = rightAppImage.querySelector("img").cloneNode(true);
-      //   console.log(imageCopy);
       const imageDiv = document.createElement("div");
 
       // Set styles to ensure the image fits within the screen
