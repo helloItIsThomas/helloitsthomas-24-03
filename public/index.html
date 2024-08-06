@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/footer.css"/>
     <link rel="stylesheet" href="/styles/fonts.css"/>
     <link rel="stylesheet" href="/styles/media.css"/>
+    <link rel="stylesheet" href="/styles/mobileSplash.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -27,9 +28,10 @@
     <title id="page-title"></title>
   </head>
   <body>
-    <div id="layout0">
-      <div id="projectContainer">
-        <div id="navBar">
+    <div id="desktop-view">
+      <div id="layout0">
+        <div id="projectContainer">
+          <div id="navBar">
   <div id="slider-container">
     <input type="range" min="0" max="2" step="1"  orient="vertical" class="vertical-slider" id="myNavSlider">
   </div>
@@ -45,9 +47,9 @@
     </div>
   </div>
 </div>
-        <div id="topAndBottomContent">
-          <div id="projectContent"></div>
-          <div onClick="toProject()" id="frontC">
+          <div id="topAndBottomContent">
+            <div id="projectContent"></div>
+            <div onClick="toProject()" id="frontC">
   <div id="thumbnail">
     <div id="thumbnail-outline"></div>
     <!-- <canvas class="glslCanvas" data-fragment-url="/shaders/shader.frag" data-vertex-url="/shaders/shader.vert"></canvas> -->
@@ -55,8 +57,8 @@
     <video autoplay loop></video>
   </div>
 </div>
-        </div>
-        <div id="knobBar">
+          </div>
+          <div id="knobBar">
   <div class="knob-container">
     <div class="lightContainer">
       <div class="knobLight"></div>
@@ -102,10 +104,15 @@
     <div class="knob-display">data viz</div>
   </div>
 </div>
+        </div>
+        <div id="logo">
+          <img src="/assets/hellologo.png" alt="hello logo"/>
+        </div>
       </div>
-      <div id="logo">
-        <img src="/assets/hellologo.png" alt="hello logo"/>
-      </div>
+    </div>
+    <div id="mobile-view">
+      <div class="auxPageH1">:(</div>
+      <h2>mobile currently unsupported</h2>
     </div>
   </body>
 </html>
