@@ -1,20 +1,51 @@
-const knobContainers = document.querySelectorAll(".knob-container");
-const knobs = Array.from(knobContainers).map((container) => {
-  const knobElement = container.querySelector(".knob");
-  const knobDisplay = container.querySelector(".knob-display");
-  const knobInstance = new Knob(knobElement, function (knobInstance) {
-    const angle = knobInstance.angle();
-    let value = (angle % 360) / 360;
-    if (value < 0) value += 1;
-    knobElement.style.transform = `rotate(${angle}deg)`;
-  });
+let knobContainers;
+let knobs;
 
-  return {
-    el: knobElement,
-    display: knobDisplay,
-    knob: knobInstance,
-  };
-});
+function initKnobs() {
+  knobContainers = document.querySelectorAll(".knob-container");
+  console.log("knobBar: ", knobContainers);
+  // knobContainers = document.querySelectorAll(".knob-container");
+  knobs = Array.from(knobContainers).map((container) => {
+    const knobElement = container.querySelector(".knob");
+    const knobDisplay = container.querySelector(".knob-display");
+    const knobInstance = new Knob(knobElement, function (knobInstance) {
+      const angle = knobInstance.angle();
+      let value = (angle % 360) / 360;
+      if (value < 0) value += 1;
+      knobElement.style.transform = `rotate(${angle}deg)`;
+    });
+
+    return {
+      el: knobElement,
+      display: knobDisplay,
+      knob: knobInstance,
+    };
+  });
+}
+
+let hKnobContainers;
+let hKnobs;
+
+function initHKnobs() {
+  hKnobContainers = document.querySelectorAll(".knob-container-H");
+  console.log("knob-container-H: ", hKnobContainers);
+  hKnobs = Array.from(hKnobContainers).map((container) => {
+    const knobElement = container.querySelector(".knob");
+    const knobDisplay = container.querySelector(".knob-display");
+    const knobInstance = new Knob(knobElement, function (knobInstance) {
+      const angle = knobInstance.angle();
+      let value = (angle % 360) / 360;
+      if (value < 0) value += 1;
+      knobElement.style.transform = `rotate(${angle}deg)`;
+    });
+
+    return {
+      el: knobElement,
+      display: knobDisplay,
+      knob: knobInstance,
+    };
+  });
+}
 
 const slider = document.getElementById("myNavSlider");
 slider.max = globalProjectInfo.length - 1;

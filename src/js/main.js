@@ -13,6 +13,8 @@ function doImageVideoChange() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  initKnobs();
+  initHKnobs();
   updateThumbnail(0);
 
   projectContent = document.querySelector("#projectContent");
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // commenting this topFunction out
   // will prevent an occasionaly error
   // on page load.
-  topFunction();
+  // topFunction();
 });
 
 let projectContent;
@@ -71,7 +73,6 @@ window.addEventListener("wheel", (event) => {
 function updateThumbnail(newImgIndex) {
   imageIndex = newImgIndex;
   doImageVideoChange();
-
   updateKnobs(globalProjectInfo[imageIndex].knobValues, imageIndex);
 }
 

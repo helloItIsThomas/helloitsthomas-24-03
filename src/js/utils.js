@@ -6,7 +6,6 @@ function topFunction() {
 
   const d =
     (distance / maxDistance) * (maxDuration - minDuration) + minDuration;
-  console.log(d);
 
   gsap.to(tbc, {
     scrollTop: 0,
