@@ -9,35 +9,6 @@ const knobs = Array.from(knobContainers).map((container) => {
     knobElement.style.transform = `rotate(${angle}deg)`;
   });
 
-  //   knobElement.addEventListener("mousedown", function (event) {
-  // event.preventDefault();
-  // function onMouseMove(event) {
-  //   const rect = knobElement.getBoundingClientRect();
-  //   const centerX = rect.left + rect.width / 2;
-  //   const centerY = rect.top + rect.height / 2;
-  //   const deltaX = event.clientX - centerX;
-  //   const deltaY = event.clientY - centerY;
-  //   const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 90;
-  //   knobInstance.angle(angle);
-  // }
-  //
-  // function onMouseUp() {
-  //   document.removeEventListener("mousemove", onMouseMove);
-  //   document.removeEventListener("mouseup", onMouseUp);
-  // }
-  //
-  // document.addEventListener("mousemove", onMouseMove);
-  // document.addEventListener("mouseup", onMouseUp);
-  //   });
-
-  // Scroll to turn functionality
-  //   knobElement.addEventListener("wheel", function (event) {
-  // event.preventDefault();
-  // let angle = knobInstance.angle();
-  // angle += event.deltaY > 0 ? 1 : -1;
-  // knobInstance.angle(angle);
-  //   });
-
   return {
     el: knobElement,
     display: knobDisplay,
@@ -45,30 +16,8 @@ const knobs = Array.from(knobContainers).map((container) => {
   };
 });
 
-// DEBUG ANIMATE KNOB TURNING (uncomment if needed)
-// let incrementInterval;
-// window.addEventListener("mousedown", function (event) {
-//   if (!knobs.some((knobObj) => knobObj.el === event.target)) {
-// function incrementKnobValue() {
-//   knobs.forEach((knobObj) => {
-// let angle = knobObj.knob.angle();
-// angle = (angle + 1) % 360;
-// knobObj.knob.angle(angle);
-//   });
-// }
-// incrementInterval = setInterval(incrementKnobValue, 100);
-//   }
-// });
-// window.addEventListener("mouseup", function () {
-//   clearInterval(incrementInterval);
-// });
-
-// function updateKnobLights() {
-// knobLights.forEach((light, i) => {
-// light.style.opacity =
-// i < Math.floor(knobValue * knobLights.length) ? 1 : 0.1;
-// });
-// }
+const slider = document.getElementById("myNavSlider");
+slider.max = globalProjectInfo.length - 1;
 
 function updateKnobs(vals, index) {
   trackNavThumb(index);
@@ -113,8 +62,6 @@ function trackNavThumb(i) {
   });
 }
 
-const slider = document.getElementById("myNavSlider");
-slider.max = globalProjectInfo.length - 1;
 slider.addEventListener("input", function (event) {
   const value = event.target.value;
   updateThumbnail(value);

@@ -15,30 +15,13 @@ function doImageVideoChange() {
 document.addEventListener("DOMContentLoaded", function () {
   updateThumbnail(0);
 
-  // class Knob {
-  // constructor(knobElement, callback) {
-  // this.knobElement = knobElement;
-  // this.callback = callback;
-  // this._angle = 0; // Initial angle
-  // Initialize the knob
-  // }
-  //
-  // angle(value) {
-  // if (value !== undefined) {
-  // this._angle = value;
-  // this.callback(this);
-  // }
-  // return this._angle;
-  // }
-  // }
-
   projectContent = document.querySelector("#projectContent");
   doImageVideoChange();
 
   // commenting this topFunction out
   // will prevent an occasionaly error
   // on page load.
-  // topFunction();
+  topFunction();
 });
 
 let projectContent;
