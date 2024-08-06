@@ -6,11 +6,27 @@ const loadContent = (url) => {
       document.getElementById("projectContent").innerHTML = html;
       getContentReferences();
     })
+    .then(() => {
+      initHKnobs();
+      updateHKnobs(globalProjectInfo[imageIndex].knobValues, imageIndex);
+    })
     .catch((error) => console.error("Error loading content:", error));
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("initiating h knob");
+
+  projectContent = document.querySelector("#projectContent");
+  doImageVideoChange();
+
+  // commenting this topFunction out
+  // will prevent an occasionaly error
+  // on page load.
+  // topFunction();
+
   loadContent("/projects/snickers");
+  initKnobs();
+  updateThumbnail(0);
 
   // Event listener for project links
   document.querySelectorAll(".project-link").forEach((link) => {

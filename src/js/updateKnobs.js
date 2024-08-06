@@ -3,7 +3,6 @@ let knobs;
 
 function initKnobs() {
   knobContainers = document.querySelectorAll(".knob-container");
-  console.log("knobBar: ", knobContainers);
   // knobContainers = document.querySelectorAll(".knob-container");
   knobs = Array.from(knobContainers).map((container) => {
     const knobElement = container.querySelector(".knob");
@@ -22,33 +21,6 @@ function initKnobs() {
     };
   });
 }
-
-let hKnobContainers;
-let hKnobs;
-
-function initHKnobs() {
-  hKnobContainers = document.querySelectorAll(".knob-container-H");
-  console.log("knob-container-H: ", hKnobContainers);
-  hKnobs = Array.from(hKnobContainers).map((container) => {
-    const knobElement = container.querySelector(".knob");
-    const knobDisplay = container.querySelector(".knob-display");
-    const knobInstance = new Knob(knobElement, function (knobInstance) {
-      const angle = knobInstance.angle();
-      let value = (angle % 360) / 360;
-      if (value < 0) value += 1;
-      knobElement.style.transform = `rotate(${angle}deg)`;
-    });
-
-    return {
-      el: knobElement,
-      display: knobDisplay,
-      knob: knobInstance,
-    };
-  });
-}
-
-const slider = document.getElementById("myNavSlider");
-slider.max = globalProjectInfo.length - 1;
 
 function updateKnobs(vals, index) {
   trackNavThumb(index);
@@ -84,17 +56,3 @@ function updateLights(vals) {
     }
   });
 }
-
-function trackNavThumb(i) {
-  gsap.to(document.getElementById("myNavSlider"), {
-    value: imageIndex,
-    duration: 0.01,
-    ease: "power1.inOut",
-  });
-}
-
-slider.addEventListener("input", function (event) {
-  const value = event.target.value;
-  updateThumbnail(value);
-  console.log("value: " + value);
-});

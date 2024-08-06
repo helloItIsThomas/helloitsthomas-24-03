@@ -1,10 +1,10 @@
-let knobContainers;
-let knobs;
+let hKnobContainers;
+let hKnobs;
 
-function initKnobs() {
-  knobContainers = document.querySelectorAll(".knob-container");
-  // knobContainers = document.querySelectorAll(".knob-container");
-  knobs = Array.from(knobContainers).map((container) => {
+function initHKnobs() {
+  hKnobContainers = document.querySelectorAll(".knob-container-H");
+  console.log("knob-container-H: ", hKnobContainers);
+  hKnobs = Array.from(hKnobContainers).map((container) => {
     const knobElement = container.querySelector(".knob");
     const knobDisplay = container.querySelector(".knob-display");
     const knobInstance = new Knob(knobElement, function (knobInstance) {
@@ -22,10 +22,10 @@ function initKnobs() {
   });
 }
 
-function updateKnobs(vals, index) {
+function updateHKnobs(vals, index) {
   trackNavThumb(index);
   gsap.to(
-    knobs.map((k) => k.knob),
+    hKnobs.map((k) => k.knob),
     {
       angle: (i) => vals[i] * 360,
       duration: 0.666,
@@ -36,23 +36,23 @@ function updateKnobs(vals, index) {
       ease: "elastic.inOut",
     }
   );
-  updateLights(vals);
+  updateHLights(vals);
 }
 
-function updateLights(vals) {
-  knobContainers.forEach((knobContainer, i) => {
-    const lights = knobContainer.querySelectorAll(".knobLight");
-    const numLights = lights.length;
+function updateHLights(vals) {
+  hKnobContainers.forEach((knobContainer, i) => {
+    const hLights = knobContainer.querySelectorAll(".knobLight");
+    const numLights = hLights.length;
 
-    lights.forEach((light) => {
+    hLights.forEach((light) => {
       light.style.opacity = 0.1;
     });
 
     // Calculate the index of the closest light
     const closestLightIndex = Math.round(vals[i] * (numLights - 1));
     if (closestLightIndex >= 0 && closestLightIndex < numLights) {
-      lights[closestLightIndex].style.opacity = 1.0;
-      lights[closestLightIndex].style.backgroundColor = "rgb(255, 0, 0)";
+      hLights[closestLightIndex].style.opacity = 1.0;
+      hLights[closestLightIndex].style.backgroundColor = "rgb(255, 0, 0)";
     }
   });
 }

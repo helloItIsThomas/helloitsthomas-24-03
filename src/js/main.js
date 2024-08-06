@@ -1,5 +1,4 @@
 function doImageVideoChange() {
-  console.log(imageIndex);
   if (globalProjectInfo[imageIndex].thumbnail.includes("mov")) {
     // thumbnailImg.src = "";
     thumbnailImg.style.display = "none";
@@ -11,21 +10,6 @@ function doImageVideoChange() {
     thumbnailImg.src = globalProjectInfo[imageIndex].thumbnail;
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  initKnobs();
-  initHKnobs();
-  updateThumbnail(0);
-
-  projectContent = document.querySelector("#projectContent");
-  doImageVideoChange();
-
-  // commenting this topFunction out
-  // will prevent an occasionaly error
-  // on page load.
-  // topFunction();
-});
-
 let projectContent;
 
 window.addEventListener("resize", () => {
