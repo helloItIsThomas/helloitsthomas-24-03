@@ -5,6 +5,8 @@ const globalState = {
 let imageIndex = 0;
 let selectedProject = 0;
 
+let rightAppImages;
+
 class ProjectInfo {
   constructor(title, thumbnail, link, knobValues) {
     this.title = title;

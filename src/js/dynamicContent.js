@@ -4,6 +4,7 @@ const loadContent = (url) => {
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("projectContent").innerHTML = html;
+      getContentReferences();
     })
     .catch((error) => console.error("Error loading content:", error));
 };
@@ -34,3 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function getContentReferences() {
+  console.log("Getting current content references");
+  appImageListener();
+}
