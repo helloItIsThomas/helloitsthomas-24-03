@@ -2,10 +2,35 @@ function createPopupImage(_imgCopy) {
   const imageDiv = document.createElement("div");
   imageDiv.id = "popupImageDiv";
   _imgCopy.id = "popupImage";
+
+  gsap.to(_imgCopy, {
+    left: "0vw",
+    width: "100vw",
+    duration: 0.333,
+    ease: "power2.out",
+  });
+  gsap.to(imageDiv, {
+    opacity: 1,
+    duration: 0.333,
+    ease: "power2.out",
+  });
   imageDiv.appendChild(_imgCopy);
   document.body.appendChild(imageDiv);
   imageDiv.addEventListener("click", function () {
-    document.body.removeChild(imageDiv);
+    gsap.to(_imgCopy, {
+      left: "50vw",
+      width: "0vw",
+      duration: 0.333,
+      ease: "power2.out",
+      onComplete: function () {
+        document.body.removeChild(imageDiv);
+      },
+    });
+    gsap.to(imageDiv, {
+      opacity: 0,
+      duration: 0.333,
+      ease: "power2.out",
+    });
   });
 }
 

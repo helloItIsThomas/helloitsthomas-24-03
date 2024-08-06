@@ -49,11 +49,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
 }
 
 #popupImage {
+  width: 0%;
+  height: auto;
   max-width: 95vw;
   max-height: 95vh;
 }
