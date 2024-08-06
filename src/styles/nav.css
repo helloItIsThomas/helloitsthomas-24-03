@@ -58,15 +58,18 @@
 }
 
 .vertical-slider {
-  -webkit-appearance: none;
-  appearance: none;
+  -webkit-appearance: slider-vertical;
+  writing-mode: bt-lr;
+  /* -webkit-appearance: none; */
+  /* appearance: none; */
   width: 2px;
   height: 70%;
   border-radius: 100cap;
   cursor: pointer;
-  background-color: #aaaaaa;
-  --thumbDiam: 15px;
-  --thumbRad: 4px;
+  background-color: #000;
+  /* outline: none; */
+  /* --thumbDiam: 15px; */
+  /* --thumbRad: 4px; */
 }
 
 .vertical-slider::-webkit-slider-thumb {
