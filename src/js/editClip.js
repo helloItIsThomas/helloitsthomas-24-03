@@ -18,8 +18,21 @@ function getDimensions() {
 }
 
 function setClipPath(top, right, bottom, left, radius = 0) {
+  const thumbnail = document.querySelector("#thumbnail");
   const clipPathValue = `rect(${top}px ${right}px ${bottom}px ${left}px round ${radius}px)`;
-  document.querySelector("#thumbnail").style.clipPath = clipPathValue;
+
+  thumbnail.style.clipPath = clipPathValue;
+  thumbnail.style.setProperty("--clip-path", clipPathValue);
+
+  console.log(bottom);
+
+  gsap.to(thumbnail, {
+    "--after-top": `${top}px`,
+    "--after-bottom": `${bottom - top}px`,
+    "--after-radius": `${radius}px`,
+    duration: 0.001,
+    ease: "power2.inOut",
+  });
 }
 
 function instantClipReset() {
@@ -46,6 +59,7 @@ function resetClip() {
     top: 0,
     bottom: parentHeight,
     duration: 0.1,
+    ease: "power2.inOut",
     onUpdate: () =>
       setClipPath(
         myRect.top,
@@ -71,6 +85,7 @@ function resizeClip() {
     top: row1Height,
     bottom: row1Height + row2Height,
     duration: 0.1,
+    ease: "power2.inOut",
     onUpdate: () =>
       setClipPath(
         myRect.top,
