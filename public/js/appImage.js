@@ -4,8 +4,8 @@ function createPopupImage(_imgCopy) {
   _imgCopy.id = "popupImage";
 
   gsap.to(_imgCopy, {
-    left: "0vw",
-    width: "100vw",
+    top: "0",
+    height: "100%",
     duration: 0.333,
     ease: "power2.out",
   });
@@ -18,8 +18,8 @@ function createPopupImage(_imgCopy) {
   document.body.appendChild(imageDiv);
   imageDiv.addEventListener("click", function () {
     gsap.to(_imgCopy, {
-      left: "50vw",
-      width: "0vw",
+      top: "50%",
+      height: "0",
       duration: 0.333,
       ease: "power2.out",
       onComplete: function () {
