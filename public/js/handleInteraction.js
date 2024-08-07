@@ -126,16 +126,24 @@ function expandSlider() {
 
 function shrinkKnobBar() {
   const knobBar = document.querySelector("#knobBar");
-
+  const knobContainers = document.querySelectorAll(".knob-container");
+  gsap.to(knobContainers, {
+    opacity: 0,
+    duration: 0.4,
+    stagger: 0.1,
+    ease: "power2.inOut",
+    onComplete: () => {
+      knobContainers.forEach((knob) => {
+        knob.style.display = "none";
+      });
+      resizeClip();
+    },
+  });
   gsap.to(knobBar, {
     width: 20,
-    opacity: 0,
     duration: 0.4,
     stagger: 0.0,
     ease: "power2.inOut",
-    onComplete: () => {
-      resizeClip();
-    },
   });
 }
 
@@ -147,5 +155,23 @@ function expandKnobBar() {
     opacity: 1,
     duration: 0.4,
     ease: "power2.inOut",
+    onComplete: () => {
+      knobContainers.forEach((knob) => {
+        knob.style.display = "block";
+      });
+    },
+  });
+
+  const knobContainers = document.querySelectorAll(".knob-container");
+  gsap.to(knobContainers, {
+    opacity: 1,
+    duration: 0.4,
+    stagger: 0.1,
+    ease: "power2.inOut",
+    onComplete: () => {
+      knobContainers.forEach((knob) => {
+        knob.style.display = "block";
+      });
+    },
   });
 }

@@ -33,8 +33,11 @@ h1 {
   border-radius: 5vw;
   box-sizing: border-box;
   border: 3px lightgrey solid;
-  background: #fff;
+  /* background: #fff; */
+  background-color: orange;
+
   overflow-y: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -42,6 +45,7 @@ h1 {
 }
 
 #projectContent {
+  background-color: blue;
   width: 100%;
   height: auto;
 }
