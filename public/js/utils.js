@@ -17,3 +17,8 @@ function topFunction() {
     },
   });
 }
+
+function instantTopFunction() {
+  console.log("INSTANT TOP FUNCTION");
+  tbc.scrollTop = 0;
+}

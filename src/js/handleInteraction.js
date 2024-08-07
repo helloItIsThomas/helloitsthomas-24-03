@@ -24,13 +24,11 @@ function toHome() {
   }
 }
 function toProject() {
+  instantTopFunction();
   const contentURL = globalProjectInfo[imageIndex].link;
-  // const contentURL = links[imageIndex];
   loadContent(contentURL);
-  // tbc.style.overflowY = "scroll";
   if (globalState.isHome) {
     globalState.isHome = false;
-    // const thumb = document.getElementById("projectContent");
     shrinkSocials();
     shrinkSlider();
   }

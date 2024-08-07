@@ -47,7 +47,7 @@
   background-color: black;
   width: 2px;
   /* height: 100%; */
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 #navHandle {
@@ -101,16 +101,33 @@
 }
 .socialIcon {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  border-radius: 500px;
+  box-sizing: border-box;
+  padding: 5px;
 }
+
+.socialIcon img:hover {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1),
+    rgba(150, 150, 150, 1)
+  );
+}
+
 .socialIcon img {
+  box-sizing: border-box;
+  padding: 2px;
   max-width: 100%;
   max-height: 100%;
   width: 100%;
   height: auto;
+  /* border: #000 1px solid; */
+  border-radius: 500px;
 }
 
 /* Navigation Menu */

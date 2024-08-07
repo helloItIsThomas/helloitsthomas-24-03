@@ -7,7 +7,7 @@
   height: var(--after-bottom);
   box-sizing: border-box;
   border-radius: var(--after-radius);
-  border: 6px solid black;
+  border: 3px solid black;
   pointer-events: none;
 }
 
