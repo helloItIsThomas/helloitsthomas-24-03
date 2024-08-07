@@ -55,9 +55,9 @@
 }
 
 #popupImage {
+  width: 100%;
+  height: 100%;
   max-width: 80%; /* or any desired percentage */
   max-height: 80%; /* or any desired percentage */
-  width: auto;
-  height: auto;
   object-fit: contain;
 }
