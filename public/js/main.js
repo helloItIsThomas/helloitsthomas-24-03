@@ -1,12 +1,14 @@
 function doImageVideoChange() {
-  if (globalProjectInfo[imageIndex].thumbnail.includes("mov")) {
-    // thumbnailImg.src = "";
+  if (
+    globalProjectInfo[imageIndex].thumbnail.includes("mov") ||
+    globalProjectInfo[imageIndex].thumbnail.includes("mp4")
+  ) {
     thumbnailImg.style.display = "none";
     thumbnailVid.style.display = "block";
     thumbnailVid.src = globalProjectInfo[imageIndex].thumbnail;
   } else {
-    thumbnailVid.style.display = "none";
     thumbnailImg.style.display = "block";
+    thumbnailVid.style.display = "none";
     thumbnailImg.src = globalProjectInfo[imageIndex].thumbnail;
   }
 }

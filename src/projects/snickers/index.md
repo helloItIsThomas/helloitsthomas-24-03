@@ -2,7 +2,7 @@
 title: "snickers gaming"
 description: "A set of image filters to inject new personality into existing, high-equity brand assets."
 layout: "layouts/projectBackC.njk"
-thumbnailImg: "assets/projects/budMusic/product-3.png"
+thumbnailImg: ""
 modules:
   - name: "0"
     components:

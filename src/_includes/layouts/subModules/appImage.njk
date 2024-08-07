@@ -6,7 +6,7 @@
         .endsWith('.mov')or component
         .mainSrc
         .endsWith('.mp4') %}
-        <video playsinline class="imgFullW" src="{{ component.mainSrc }}" alt="{{ appImage.main.alt }}" controls></video>
+        <video controls class="imgFullW" src="{{ component.mainSrc }}" alt="{{ appImage.main.alt }}" controls></video>
       {% else %}
         <img src="{{ component.mainSrc }}" alt="{{ appImage.main.alt }}">
       {% endif %}
@@ -18,7 +18,7 @@
           .endsWith('.mov')or image
           .src
           .endsWith('.mp4') %}
-          <video playsinline class="imgFullW" src="{{ image.src }}" alt="{{ image.alt }}" controls></video>
+          <video controls class="imgFullW" src="{{ image.src }}" alt="{{ image.alt }}"></video>
         {% else %}
           <img src="{{ image.src }}" alt="{{ image.alt }}">
         {% endif %}

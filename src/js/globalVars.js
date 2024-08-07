@@ -31,7 +31,7 @@ const globalProjectInfo = [
   ),
   new ProjectInfo(
     "Snickers",
-    "/assets/projects/snickers/banner.mov",
+    "/assets/projects/snickers/banner.mp4",
     "/projects/snickers",
     [0.8, 0.7, 0.2, 0.0]
   ),

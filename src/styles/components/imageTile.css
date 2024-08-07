@@ -5,16 +5,25 @@
 
 .image-tile .row {
   display: flex;
-  flex: 1 1 0;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust as needed */
+  justify-content: space-between; /* Adjust alignment as needed */
 }
 
-.image-tile .row > * {
-  flex: 1 1 auto; /* Adjust the size of the elements to fit the row */
-  max-width: 100%; /* Ensure the elements do not exceed the container's width */
-  margin: 5px; /* Add some spacing between elements */
+.image-tile .row .tag {
+  flex: 1 1 auto; /* Allow tags to grow/shrink as needed */
+  max-width: calc((100% / var(--num-tags)) - 10px); /* Use CSS variable */
+  box-sizing: border-box; /* Include padding/border in width calculation */
 }
 
-.image-tile .row video,
+.image-tile .row video {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+}
+
 .image-tile .row img {
   box-sizing: border-box;
   border: 1px solid #ccc;
