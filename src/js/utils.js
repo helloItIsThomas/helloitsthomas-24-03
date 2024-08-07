@@ -19,6 +19,14 @@ function topFunction() {
 }
 
 function instantTopFunction() {
-  console.log("INSTANT TOP FUNCTION");
-  tbc.scrollTop = 0;
+  gsap.to(tbc, {
+    scrollTop: 0,
+    duration: 0.01,
+    ease: "power2.inOut",
+    onComplete: () => {
+      console.log("INSTANT TOP FUNCTION DONE");
+      // console.log("reset clip about to run");
+      // resetClip();
+    },
+  });
 }

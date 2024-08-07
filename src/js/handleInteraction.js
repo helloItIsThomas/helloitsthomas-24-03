@@ -24,7 +24,6 @@ function toHome() {
   }
 }
 function toProject() {
-  instantTopFunction();
   const contentURL = globalProjectInfo[imageIndex].link;
   loadContent(contentURL);
   if (globalState.isHome) {

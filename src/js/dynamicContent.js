@@ -9,6 +9,7 @@ const loadContent = (url) => {
     .then(() => {
       initHKnobs();
       updateHKnobs(globalProjectInfo[imageIndex].knobValues, imageIndex);
+      instantTopFunction();
     })
     .catch((error) => console.error("Error loading content:", error));
 };

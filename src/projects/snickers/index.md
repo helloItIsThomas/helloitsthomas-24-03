@@ -1,6 +1,6 @@
 ---
 title: "snickers gaming"
-description: "one 1"
+description: "A set of image filters to inject new personality into existing, high-equity brand assets."
 layout: "layouts/projectBackC.njk"
 thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
@@ -59,7 +59,7 @@ modules:
         data:
           headline: "Secondary Graphic Filters"
           cols:
-            - src: "A second exploration focused on secondary imagery"
+            - src: "An exploration focused on secondary imagery."
   - name: "3"
     components:
       - type: imageTile

@@ -1,6 +1,6 @@
 ---
 title: "bud music suite"
-description: "I designed and developed a suite of macOS applications to rapidly iterate, accelerate production processes, and democratize motion design"
+description: "I designed and developed a suite of macOS applications to rapidly iterate, accelerate production processes, and democratize motion design."
 layout: "layouts/projectBackC.njk"
 thumbnailImg: "assets/projects/budMusic/product-3.png"
 modules:
@@ -73,6 +73,6 @@ modules:
         data:
           headline: "Treatment Helper"
           cols:
-            - src: "This app was developd as a production assistant for the design team"
+            - src: "This app was developd as a production assistant for the design team."
             - src: "The tool automates the constants while exposing the variables to the designer, optimizing the workflow for creating these assets."
 ---

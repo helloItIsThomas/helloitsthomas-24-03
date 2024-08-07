@@ -1,6 +1,6 @@
 ---
 title: "Mozilla"
-description: " "
+description: "A series of dynamic image filtering tools designed to inject brand recognizability into crowd-sourced images."
 layout: "layouts/projectBackC.njk"
 thumbnailImg: "assets/projects/mozilla/banner.png"
 modules:
@@ -19,9 +19,9 @@ modules:
             alt: "Image 1"
       - type: text
         data:
-          headline: "Pattern Generator"
+          headline: "Gradient Pixelation Filter"
           cols:
-            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale."
+            - src: "This filter combines a bespoke color grading process with a pixelation effect, instantly branding an image from any source."
   - name: "Repeat Filter"
     components:
       - type: appImage
@@ -35,9 +35,9 @@ modules:
             alt: "Image 1"
       - type: text
         data:
-          headline: "Pattern Generator"
+          headline: "Graphic Filter"
           cols:
-            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale."
+            - src: "This application works alongside the user's design software of choise, intuitively allowing the user to create the perfect composition before exporting the treated image."
   - name: "Chunky Pixel Filter"
     components:
       - type: appImage
@@ -53,9 +53,9 @@ modules:
             alt: "Image 1"
       - type: text
         data:
-          headline: "Pattern Generator"
+          headline: "Graphic Pixelation Filter"
           cols:
-            - src: "This app was developed to visualize how a pattern-based image treatment might look at scale."
+            - src: "This app generates the backdrop for a two part image treatment process. The final image illustrates 'Clarity from Complexity'."
 ---
 
 ---
