@@ -111,8 +111,8 @@ function expandSlider() {
   const navBar = document.querySelectorAll(".vertical-slider")[0];
 
   gsap.to(navBar, {
-    "--thumbDiam": "15",
-    "--thumbRad": "4",
+    "--thumbDiam": "13",
+    "--thumbRad": "2",
     "--thumbDisplay": "block",
     height: "70%",
     duration: 0.4,

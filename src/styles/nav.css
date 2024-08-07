@@ -66,10 +66,10 @@
   height: 70%;
   border-radius: 100cap;
   cursor: pointer;
-  background-color: #000;
+  background-color: grey;
   /* outline: none; */
-  --thumbDiam: 15px;
-  --thumbRad: 4px;
+  --thumbDiam: 13px;
+  --thumbRad: 2px;
   --thumbDisplay: block;
 }
 
