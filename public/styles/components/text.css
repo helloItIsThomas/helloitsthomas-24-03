@@ -13,5 +13,7 @@
 
 .text-grid p {
   font-size: small;
+  padding: 5px;
+  padding-right: 25px;
   margin: 0;
 }

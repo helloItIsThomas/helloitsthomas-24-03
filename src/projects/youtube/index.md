@@ -10,19 +10,19 @@ modules:
         data:
           rows:
             - images:
-                - src: "assets/projects/youtubecherry/poppy/FinalComps/8.jpg"
+                - src: "assets/projects/youtubeCherry/poppy/FinalComps/8.jpg"
                   alt: "Image 1"
-                - src: "assets/projects/youtubecherry/poppy/FinalComps/5.jpg"
+                - src: "assets/projects/youtubeCherry/poppy/FinalComps/5.jpg"
                   alt: "Image 2"
       - type: imageTile
         data:
           rows:
             - images:
-                - src: "assets/projects/youtubecherry/poppy/finalcomps/9.jpg"
+                - src: "assets/projects/youtubeCherry/poppy/FinalComps/9.jpg"
                   alt: "Image 1"
-                - src: "assets/projects/youtubecherry/poppy/Detail/2.jpg"
+                - src: "assets/projects/youtubeCherry/poppy/Detail/2.jpg"
                   alt: "Image 2"
-                - src: "assets/projects/youtubecherry/poppy/Detail/0.jpg"
+                - src: "assets/projects/youtubeCherry/poppy/Detail/0.jpg"
                   alt: "Image 2"
       - type: text
         data:
@@ -37,19 +37,19 @@ modules:
         data:
           rows:
             - images:
-                - src: "assets/projects/youtubecherry/liveOak/FinalComps/21.jpg"
+                - src: "assets/projects/youtubeCherry/liveOak/FinalComps/21.jpg"
                   alt: "Image 1"
-                - src: "assets/projects/youtubecherry/liveOak/FinalComps/5.jpg"
+                - src: "assets/projects/youtubeCherry/liveOak/FinalComps/5.jpg"
                   alt: "Image 2"
-                - src: "assets/projects/youtubecherry/liveOak/FinalComps/11.jpg"
+                - src: "assets/projects/youtubeCherry/liveOak/FinalComps/11.jpg"
                   alt: "Image 2"
       - type: imageTile
         data:
           rows:
             - images:
-                - src: "assets/projects/youtubecherry/liveOak/Detail/1.jpg"
+                - src: "assets/projects/youtubeCherry/liveOak/Detail/1.jpg"
                   alt: "Image 1"
-                - src: "assets/projects/youtubecherry/liveOak/Detail/3.jpg"
+                - src: "assets/projects/youtubeCherry/liveOak/Detail/3.jpg"
                   alt: "Image 2"
       - type: text
         data:

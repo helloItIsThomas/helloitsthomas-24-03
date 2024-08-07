@@ -46,7 +46,7 @@ modules:
   - name: "waveOtron"
     components:
       - type: appImage
-        mainSrc: "assets/projects/budMusic/wave-o-tron-app.mp4"
+        mainSrc: "assets/projects/budMusic/Wave-O-Tron-app.mp4"
         sideImages:
           - src: "assets/projects/budMusic/wave-0.png"
             alt: "side img 1"
@@ -61,11 +61,11 @@ modules:
             - src: "The Wave-O-Tron was developed to explore ways to visualize the concept of Reverb through typography and image."
             - src: "This software allows anyone to design on-brand motion assets without any prior motion design experience."
       - type: fullWidthImage
-        src: "assets/projects/budMusic/wave-o-tron-eilish.mp4"
+        src: "assets/projects/budMusic/Wave-O-Tron-Eilish.mp4"
   - name: "dropShadow"
     components:
       - type: appImage
-        mainSrc: "assets/projects/budMusic/budDropPattern.mp4"
+        mainSrc: "assets/projects/budMusic/bud-drop-pattern.mp4"
         sideImages:
           - src: "assets/projects/budMusic/dropShadow.png"
             alt: "side img 1"
