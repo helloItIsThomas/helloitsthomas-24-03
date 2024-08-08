@@ -10,7 +10,7 @@
 }
 
 #logo {
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 100;
   position: absolute;
   margin: 0;
@@ -65,7 +65,7 @@
   width: 2px;
   height: 70%;
   border-radius: 100cap;
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: grey;
   /* outline: none; */
   --thumbDiam: 13px;
